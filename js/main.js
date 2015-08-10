@@ -11,6 +11,7 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
+        $(".b-content").css("min-height",myHeight-($(".b-footer").height()+$(".b-header").height()) );
     }
     $(window).resize(resize);
     resize();
@@ -40,6 +41,59 @@ $(document).ready(function(){
       }
     }
     $.fn.placeholder();
+    
+    if( $("#b-hov").length ){
+        var timeout;
+        $( window ).load(function() {
+            setHoverTo($(".b-main-menu ul li.active"),0);
+        });
+        
+
+        $(".b-main-menu ul li").hover(function(){
+                $("#b-hov").css("margin-left","0");
+                clearTimeout(timeout);
+                setHoverTo($(this),0.4);
+            },function(){
+                    timeout = setTimeout(function(){
+                        setHoverTo($(".b-main-menu ul li.active"),0.5);
+                    },500);
+            });
+    }
+
+    function setHoverTo(el,dur){
+        var curWidth = el.width(),
+            curOffset = el.position().left;
+        TweenLite.to($("#b-hov"), dur, { "left" : curOffset, "width" : curWidth, ease : Quad.easeInOut } );
+    }
+
+    $('.b-main-slider').slick({
+        pauseOnHover: false,
+        autoplay: true,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        arrows: false
+    });
+
+    $( "#city-list li" ).hover(
+        function() {
+            $(this).find(".city-desc").slideDown();
+        }, function() {
+            $(this).find(".city-desc").slideUp();
+        }
+    );
+
+    $('.reviews-slider').slick({
+        infinite: true,
+        speed: 200,
+        autoplay: true,
+        fade: true,
+        cssEase: 'ease-in',
+        prevArrow: '<div class="arrow-cont left-arrow"><span class=" arrow"></span></div>',
+        nextArrow: '<div class="arrow-cont right-arrow"><span class=" arrow"></span></div>'
+    });
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {

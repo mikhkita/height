@@ -1,34 +1,53 @@
-
 @font-face {
-	font-family: 'PFL';
-	src: url('../fonts/pdfintextcondpro-light-webfont.eot');
-    src: url('../fonts/pdfintextcondpro-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/pdfintextcondpro-light-webfont.woff') format('woff'),
-         url('../fonts/pdfintextcondpro-light-webfont.ttf') format('truetype');
+    font-family: 'museo_sans_cyrl100';
+    src: url('../fonts/museosanscyrl.eot');
+    src: url('../fonts/museosanscyrl.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museosanscyrl.woff2') format('woff2'),
+         url('../fonts/museosanscyrl.woff') format('woff'),
+         url('../fonts/museosanscyrl.ttf') format('truetype'),
+         url('../fonts/museosanscyrl.svg#museo_sans_cyrl100') format('svg');
     font-weight: normal;
     font-style: normal;
+
+}
+@font-face {
+    font-family: 'museo_sans_cyrl300';
+    src: url('../fonts/museosanscyrl_0.eot');
+    src: url('../fonts/museosanscyrl_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museosanscyrl_0.woff2') format('woff2'),
+         url('../fonts/museosanscyrl_0.woff') format('woff'),
+         url('../fonts/museosanscyrl_0.ttf') format('truetype'),
+         url('../fonts/museosanscyrl_0.svg#museo_sans_cyrl300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
-	font-family: 'PFR';
-	src: url('../fonts/pfdintextcondpro-regular-webfont.eot');
-    src: url('../fonts/pfdintextcondpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/pfdintextcondpro-regular-webfont.woff') format('woff'),
-         url('../fonts/pfdintextcondpro-regular-webfont.ttf') format('truetype');
+    font-family: 'museo_sans_cyrl500';
+    src: url('../fonts/museosanscyrl_1.eot');
+    src: url('../fonts/museosanscyrl_1.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museosanscyrl_1.woff2') format('woff2'),
+         url('../fonts/museosanscyrl_1.woff') format('woff'),
+         url('../fonts/museosanscyrl_1.ttf') format('truetype'),
+         url('../fonts/museosanscyrl_1.svg#museo_sans_cyrl500') format('svg');
     font-weight: normal;
     font-style: normal;
+
 }
 
 @font-face {
-	font-family: 'PFM';
-	src: url('../fonts/pfdintextcondpro-medium-webfont.eot');
-    src: url('../fonts/pfdintextcondpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/pfdintextcondpro-medium-webfont.woff') format('woff'),
-         url('../fonts/pfdintextcondpro-medium-webfont.ttf') format('truetype');
+    font-family: 'museo_sans_cyrl700';
+    src: url('../fonts/museosanscyrl_2.eot');
+    src: url('../fonts/museosanscyrl_2.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museosanscyrl_2.woff2') format('woff2'),
+         url('../fonts/museosanscyrl_2.woff') format('woff'),
+         url('../fonts/museosanscyrl_2.ttf') format('truetype'),
+         url('../fonts/museosanscyrl_2.svg#museo_sans_cyrl700') format('svg');
     font-weight: normal;
     font-style: normal;
-}
 
+}
 
 html,
 body {
@@ -37,26 +56,26 @@ body {
 body {
 	min-width: 1000px;
 	text-align: center;
-	font-family: 'PFL';
+	font-family: 'museo_sans_cyrl300';
 	overflow-x: hidden;
-	color: #472275;
+	overflow-y: scroll;
+	color: #000;
 }
 a{
 	text-decoration: none;
-	color: #472275;
+	color: #000;
 }
 li{
 	list-style: none;
 }
 h1,h2,h3,h4,h5,h6{
-	font-weight: 100;
+	font-weight: 500;
 }
 label.error{
 	display: none !important;
 }
 input.error,textarea.error{
-	border: 1px solid #F00 !important;
-	box-shadow: 0 0px 0px 1px #F00;
+	border: 2px solid #F00 !important;
 }
 .ps-lines{
 
@@ -97,7 +116,7 @@ input.error,textarea.error{
 }
 .b-block{
 	position: relative;
-	width: 1000px;
+	width: 960px;
 	margin: 0px auto;
 }
 .b-absolute{
@@ -107,10 +126,10 @@ input.error,textarea.error{
 	margin-left: -500px;
 }
 input::-webkit-input-placeholder {
-	color: #434343;
+	color: #c7c7c7;
 }
 input:-moz-placeholder {
-	color: #434343;
+	color: #c7c7c7;
 }
 .b-orange-butt{
 
@@ -118,10 +137,549 @@ input:-moz-placeholder {
 	.b-orange-butt:hover{
 		
 	}
-.b-1{
-	
+p {
+	color: #5a5a5a;
 }
+.title {
+	font-family: "museo_sans_cyrl500";
+	font-size: 36px;
+	color: #262626;
+	line-height: 1.2;
+}
+.b-header{
+	box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.13);
+	position: relative;
+	z-index: 100;
+} 
+	.b-header .b-block {
+		font-size: 16px;
+		padding-bottom: 15px;
+	}	
+		.b-header .b-block .logo {
+			display: block;
+			font-size: 0;
+		}
+		.b-hover-block {
+		    position: absolute;
+		    left: 0px;
+		    top: 0;
+		    background-color: #02baea;
+		    height: 6px;
+
+		
+}
+		.b-header .b-block .b-main-menu {
+			position: absolute;
+			left: 148px;
+			top: 0;
+		}
+		.b-header .b-block .b-main-menu ul {
+    		padding-top: 27px;
+		}
+			.b-header .b-block .b-main-menu ul li {
+				float: left;
+			
+				margin-right: 5px;
+}
+			.b-header .b-block .b-main-menu ul li.active{
+			}
+				.b-header .b-block .b-main-menu ul li a{
+					padding: 15px;		
+					display: block;
+				}
+		.b-header .b-block .b-date-cont {
+			text-align: right;
+			margin-top: 27px;
+		}
+			.b-header .b-block .b-date-cont h2{
+				font-family: "museo_sans_cyrl500";
+				font-size: 18px;
+				color: #5a5a5a;
+			}
+			.b-header .b-block .b-date-cont a{
+				text-decoration: underline;
+				color: #02baea;
+				display: block;
+				margin-top: 5px;
+			}
+				.b-header .b-block .b-date-cont a:hover{
+					text-decoration: none;
+				}
+.b-main-slider {
+	color: #fff;
+}
+	.b-main-slider  .slick-dots{
+		position: absolute;
+		right: 50%;
+		margin-right: -478px;
+		bottom: 46px;
+	}
+		.b-main-slider  .slick-dots li {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 23px;
+		}
+		.b-main-slider  .slick-dots li:last-child {
+			margin-right: 0;
+		}
+		.b-main-slider  .slick-dots li button{
+			font-size: 0;
+			border: none;
+			width: 15px;
+			display: block;
+			height: 15px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.5);
+			cursor: pointer;
+		}
+			.b-main-slider  .slick-dots li.slick-active button{
+				background-color: #fff;
+				cursor: default;
+			}
+	.b-main-slider .slide{
+		background-size: cover;
+		background-position: 50% 0%;
+	}
+	.b-main-slider .b-block {
+		padding-top: 51px;
 	
+		padding-bottom: 43px;
+}
+		.b-main-slider .b-block h2{
+			font-family: "museo_sans_cyrl500";
+			font-size: 47.34px;
+			line-height: 1.2;
+			padding: 0 9%;
+}
+		.b-main-slider .b-block .city{
+			text-align: left;
+			margin-top: 269px;
+		}
+			.b-main-slider .b-block .city h3{
+				font-size: 30px;
+				text-align: left;
+			}
+.b-advantages {
+
+}
+	.b-advantages .b-block {
+
+	}
+	.b-advantages .b-block ul{
+	}
+		.b-advantages .b-block ul li{
+			display: table;
+			float: left;
+			height: 164px;
+			width: 25%;
+			vertical-align: middle;
+			text-align: left;
+		}
+			.b-advantages .b-block ul li div{
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.b-advantages .b-block ul li h3{
+				font-family: "museo_sans_cyrl300";
+				font-size: 20px;
+				line-height: 1.3;
+				display: table-cell;
+				vertical-align: middle;
+				padding-left: 16px;
+			}
+			.b-advantages .b-block ul li:nth-child(4n){
+				float: right;
+				width: 200px;
+			}
+.b-about {
+	padding: 50px 0 50px 0;
+	background-image: url("../i/about-back.jpg");
+	background-size: cover;
+	background-position: 50% 0%;
+}
+	.b-about .b-block {
+		background-color: rgba(255,255,255,0.851);
+		border-radius: 5px;
+		padding: 19px 44px 30px;
+		box-sizing: border-box;
+		text-align: left;
+	}
+		.b-about .b-block h2{
+			margin-bottom: 11px;
+		}
+		.b-about .b-block .line {
+			width: 100%;
+			height: 4px;
+			border-radius: 5px;
+			background-color: #02baea;
+		}
+		.b-about .b-block p{
+			font-family: "museo_sans_cyrl300";
+			font-size: 18px;
+			line-height: 1.556;
+			margin-top: 24px;
+}
+.b-city {
+
+}
+	.b-city .b-block {
+		text-align: left;
+		padding-top: 48px;
+	
+		padding-bottom: 60px;
+}
+		.b-city .b-block h2{
+		
+		}
+		.b-city .b-block ul{
+    
+		
+		}
+			.b-city .b-block ul li{
+				background-size: cover;
+				background-position: 50% 50%;
+				width: 469px;
+				height: 300px;
+				float: left;
+				vertical-align: bottom;
+				position: relative;
+				margin-top: 25px;
+			}
+			.b-city .b-block ul li a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			.b-city .b-block ul li:nth-child(2n) {
+				float: right;
+			}
+				.b-city .b-block ul li .city-cont{
+					width: 100%;
+					box-sizing: border-box;
+				    position: absolute;					
+				    bottom: 0;
+				    padding: 21px 15px 21px 25px;
+				    background-color: rgba(255,255,255,0.851);
+				}
+					.b-city .b-block ul li .city-cont h3{
+						font-family: "museo_sans_cyrl300";
+						font-size: 20px;
+						line-height: 1.3;
+					}
+					.b-city .b-block ul li .city-cont .city-desc {
+						display: none;
+						margin-top: 17px;
+					}
+					.b-city .b-block ul li .city-cont .city-desc span{
+						width: 150px;
+						height: 2px;
+						display: block;
+						background-color: #02baea;
+					}
+					.b-city .b-block ul li .city-cont .city-desc p{
+						font-family: "museo_sans_cyrl100";
+						font-size: 14px;
+						padding: 13px 0 0;
+						line-height: 1.857;
+					}
+.b-top-excurs {
+	background-color: #f5f5f5;
+}
+	.b-top-excurs .b-block {
+		text-align: left;
+		padding-top: 43px;
+
+	
+		padding-bottom: 45px;
+}
+	.b-top-excurs .b-block .tabs{
+    	margin-top: 23px;
+		
+	}
+		.b-top-excurs .b-block .tabs li{
+			float: left;
+			margin-right: 26px;
+		}
+			.b-top-excurs .b-block .tabs li a{
+				font-family: "museo_sans_cyrl300";
+				font-size: 18px;
+				line-height: 1.2;
+				color: #323232;
+				border-radius: 17px;
+				border: 2px solid #02baea;
+				padding: 6px 14px 5px;
+				display: block;
+			}
+			.b-top-excurs .b-block .tabs li a:hover{
+				background-color: #cfeff9;
+			}
+			.b-top-excurs .b-block .tabs li.active a,.b-top-excurs .b-block .tabs li.active a:hover {
+				cursor: default;
+				color: #fff;
+				background-color: #02baea;
+			}
+			
+			
+	.b-top-excurs .b-block .excursions{
+		
+	}
+		.b-top-excurs .b-block .excursions li{
+			display: inline-block;
+			margin-right: 15px;
+		
+			margin-top: 45px;
+			width: 307px;
+			vertical-align: top;
+}
+		.b-top-excurs .b-block .excursions li:nth-child(3n){
+			margin-right: 0;
+		}
+			.b-top-excurs .b-block .excursions li a{ 
+				display: block;
+			}
+			.b-top-excurs .b-block .excursions li a div{
+				position: relative;
+				background-size: cover;
+				background-position: 50% 50%;
+				width: 100%;
+				height: 203px;
+			}
+				.b-top-excurs .b-block .excursions li a div span{
+					position: absolute;
+					right: -6px;
+					bottom: 18px;
+					width: 143px;
+					height: 53px;
+					box-sizing: border-box;
+					padding: 15px 0 15px 30px;
+					background-image: url("../i/price.png");
+					background-position: 50% 50%;
+					background-repeat: no-repeat;
+					font-family: "museo_sans_cyrl500";
+					font-size: 16px;
+					line-height: 1.75;			
+					color: #fff;
+				}
+			.b-top-excurs .b-block .excursions li a h3{ 
+				font-family: "museo_sans_cyrl500";
+				font-size: 18px;
+				line-height: 1.556;
+				margin-top: 14px;
+			}
+				.b-top-excurs .b-block .excursions li:hover a h3{ 
+					text-decoration: underline;
+				}
+.b-reviews {
+	background-image: url("../i/reviews.jpg");
+}
+	.b-reviews .b-block .reviews-slider .arrow-cont {
+		position: absolute;
+		top: -53px;
+		width: 26px;
+		height: 26px;
+		border: 2px solid #02baea;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+		.b-reviews .b-block .reviews-slider .arrow-cont.left-arrow {
+			right: 43px;
+		}
+		.b-reviews .b-block .reviews-slider .arrow-cont.right-arrow {
+			right: 6px;
+		}
+	.b-reviews .b-block .reviews-slider .arrow-cont .arrow{
+		position: absolute;
+		top: 6px;
+		left: 8px;
+		width: 11px;
+		height: 15px;
+		background-image: url("../i/reviews-arrows.png");
+		background-repeat: no-repeat;
+		background-position: 100% 50%;
+		
+	}
+	.b-reviews .b-block .reviews-slider .arrow-cont.left-arrow span{
+		background-position: 0% 50%;
+	
+		left: 6px;
+}
+	.b-reviews .b-block .reviews-slider .arrow-cont:hover {
+		background-color: #02baea;
+	}
+		.b-reviews .b-block .reviews-slider .arrow-cont.left-arrow:hover span{
+			background-position: -11px 50%;
+		}
+		.b-reviews .b-block .reviews-slider .arrow-cont.right-arrow:hover span{
+			background-position: -22px 50%;
+		}
+
+	.b-reviews .b-block .review {
+		margin-top: 24px;
+	}
+		.b-reviews .b-block .review .photo{
+			width: 140px;
+			height: 140px;
+			border-radius: 50%;
+			background-position: 50% 0%;
+		}
+			.b-reviews .b-block .review .comment {
+				width: 675px;
+				margin-left: 25px;
+			}
+			.b-reviews .b-block .review .comment p{
+				margin-top: 0;
+			}
+			.b-reviews .b-block .review .comment h3{
+				font-family: "museo_sans_cyrl500";
+				font-size: 20px;
+				line-height: 1.2;
+				color: #262626;
+			
+				margin-top: 11px;
+}
+.b-question {
+
+}
+	.b-question .b-block {
+		padding-top: 29px;
+	
+		text-align: left;
+		padding-bottom: 43px;
+}
+
+		.b-question .b-block .left{
+			width: 240px;
+		}
+			.b-question .b-block .left h3{
+				font-family: "museo_sans_cyrl500";
+				font-size: 20px;
+				line-height: 1.2;
+				color: #262626;
+			}
+			.b-question .b-block .left h4{
+				font-family: "museo_sans_cyrl300";
+				font-size: 16px;
+				line-height: 1.375;
+				margin-top: 7px;
+			}
+		.b-question .b-block .right {
+    		margin-top: 19px;
+		}
+			.b-question .b-block .right input{
+				border-radius: 17px;
+				border: 2px solid #02baea;
+				padding: 8px 14px 7px;
+				margin-right: 10px;
+				width: 160px;
+				box-sizing: border-box;
+				font-family: "museo_sans_cyrl300";
+				font-size: 16px;
+			}
+			.b-question .b-block .right input[type=submit]{
+				color: #fff;
+				background-color: #02baea;
+				margin-right: 0;
+				cursor: pointer;
+			}
+			.b-question .b-block .right input[type=submit]:hover{
+				background-color: #02A0CA;
+				border: 2px solid #02A0CA;
+			}
+.b-footer {
+	background-color: #363636;
+}
+	.b-footer .b-block {
+		text-align: left;
+		padding-top: 42px;
+		padding-bottom: 38px;
+	}
+		.b-footer .b-block .footer-services{
+			width: 270px;
+			margin-right: 121px;
+		}
+		.b-footer .b-block .right{
+			width: 230px;		
+		
+			margin-right: 14px;
+}
+			.b-footer .b-block  h3{
+				font-family: "museo_sans_cyrl300";
+				font-size: 20px;
+				line-height: 1.2;
+				color: #fff;
+				margin-bottom: 13px;
+			}
+			.b-footer .b-block  .line{
+				width: 141px;
+				height: 2px;
+				background-color: #02baea;
+			}
+			.b-footer .b-block .right .line{
+				margin-bottom: 10px;
+			}
+
+			.b-footer .b-block .footer-menu{
+    			margin-top: 10px;
+	
+			}
+				.b-footer .b-block  .footer-menu li{
+	
+				}
+					.b-footer .b-block a,.b-footer .b-block p{
+						font-family: "museo_sans_cyrl100";
+						font-size: 16px;
+						line-height: 2.063;
+						color: #fff;
+					}
+						.b-footer .b-block  .footer-menu li a:hover{
+							text-decoration: underline;
+						}
+					.b-footer .b-block a.link {
+						text-decoration: underline;
+					}
+					.b-footer .b-block a.link:hover {
+						text-decoration: none;
+					}
+				.b-footer .b-block  .footer-menu li .footer-submenu{
+
+				}
+					.b-footer .b-block  .footer-menu li .footer-submenu li{
+						position: relative;
+					}
+						.b-footer .b-block  .footer-menu li .footer-submenu li:before {
+						    content: "•";
+						    color: #02baea;
+						    font-size: 10px;
+						    position: absolute;
+						    top: 9px;
+						}
+						.b-footer .b-block  .footer-menu li .footer-submenu li a{
+							padding-left: 16px;
+						}
+.city-tabs {
+
+}
+	.city-tabs .b-block{
+	
+	}
+		.city-tabs .b-block ul{
+		
+		}
+			.city-tabs .b-block ul li{
+				display: inline-block;
+				margin-right: 10px;
+			}
+				.city-tabs .b-block ul li a{
+					color: #fff;
+					display: block;
+					font-family: "museo_sans_cyrl500";
+					font-size: 18px;
+					line-height: 1.2;    
+					border-radius: 5px 5px 0 0; 
+					background-color: #02baea;
+					box-shadow: inset 0px 5px 6.93px 0.07px rgba(0, 0, 0, 0.13);                         
+				}
+
 @media screen and (max-width: 1250px){
 	
 }
