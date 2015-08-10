@@ -89,8 +89,6 @@ $(document).ready(function(){
         infinite: true,
         speed: 200,
         autoplay: true,
-        fade: true,
-        cssEase: 'ease-in',
         prevArrow: '<div class="arrow-cont left-arrow"><span class=" arrow"></span></div>',
         nextArrow: '<div class="arrow-cont right-arrow"><span class=" arrow"></span></div>'
     });
