@@ -133,11 +133,19 @@ input::-webkit-input-placeholder {
 input:-moz-placeholder {
 	color: #c7c7c7;
 }
-.b-orange-butt{
-
+.b-blue-butt{
+	font-family: "museo_sans_cyrl300";
+	font-size: 14px;
+	line-height: 1.2;
+	color: #fff;
+	width: 125px;
+	padding: 9px 0 7px;
+	display: inline-block;
+	background-color: #00CEFC;
+	text-align: center;
 }
-	.b-orange-butt:hover{
-		
+	.b-blue-butt:hover{
+		background-color: #00B7E8;
 	}
 p {
 	color: #5a5a5a;
@@ -155,36 +163,41 @@ p {
 } 
 	.b-header .b-block {
 		font-size: 16px;
-		padding-bottom: 15px;
+		height: 114px;
 	}	
 		.b-header .b-block .logo {
-			display: block;
+			display: table;
 			font-size: 0;
-		
-			margin-top: 15px;
-}
+			height: 100%;
+		}
+			.b-header .b-block .logo a {
+				display: table-cell;
+				vertical-align: middle;
+				height: 100%;
+			}
 		.b-hover-block {
 		    position: absolute;
 		    left: 0px;
 		    top: 0;
-		    background-color: #02baea;
-		    height: 6px;
-
-		
-}
-		.b-header .b-block .b-main-menu {
-			position: absolute;
-			left: 148px;
-			top: 0;
+		    background-color: #00CEFC;
+		    height: 6px;	
 		}
+		.b-header .b-block .b-main-menu {
+			margin-left: 35px;
+			height: 100%;
+			display: table;
+		}
+			.b-header .b-block .b-main-menu > div {
+				display: table-cell;
+				height: 100%;
+				vertical-align: middle;
+			}
 		.b-header .b-block .b-main-menu ul {
-    		padding-top: 27px;
 		}
 			.b-header .b-block .b-main-menu ul li {
 				float: left;
-			
 				margin-right: 5px;
-}
+			}
 			.b-header .b-block .b-main-menu ul li.active{
 			}
 				.b-header .b-block .b-main-menu ul li a{
@@ -193,8 +206,14 @@ p {
 				}
 		.b-header .b-block .b-date-cont {
 			text-align: right;
-			margin-top: 27px;
+			display: table;
+			height: 100%;
 		}
+			.b-header .b-block .b-date-cont > div {
+				display: table-cell;
+				height: 100%;
+				vertical-align: middle;
+			}
 			.b-header .b-block .b-date-cont h2{
 				font-family: "museo_sans_cyrl500";
 				font-size: 18px;
@@ -202,7 +221,7 @@ p {
 			}
 			.b-header .b-block .b-date-cont a{
 				text-decoration: underline;
-				color: #02baea;
+				color: #00CEFC;
 				display: block;
 				margin-top: 5px;
 			}
@@ -242,7 +261,7 @@ p {
 			}
 	.b-main-slider .slide{
 		background-size: cover;
-		background-position: 50% 0%;
+		background-position: 50% 100%;
 	}
 	.b-main-slider .b-block {
 		padding-top: 51px;
@@ -315,7 +334,7 @@ p {
 			width: 100%;
 			height: 4px;
 			border-radius: 5px;
-			background-color: #02baea;
+			background-color: #00CEFC;
 		}
 		.b-about .b-block p{
 			font-family: "museo_sans_cyrl300";
@@ -378,7 +397,7 @@ p {
 						width: 150px;
 						height: 2px;
 						display: block;
-						background-color: #02baea;
+						background-color: #00CEFC;
 					}
 					.b-city .b-block ul li .city-cont .city-desc p{
 						font-family: "museo_sans_cyrl100";
@@ -393,64 +412,61 @@ p {
 }
 	.b-top-excurs .b-block {
 		text-align: left;
-		padding-top: 43px;
-
-	
+		padding-top: 43px;	
 		padding-bottom: 45px;
 }
 	.b-top-excurs .b-block .tabs{
     	margin-top: 23px;
 		
 	}
-		.b-top-excurs .b-block .tabs li{
+		.tabs li{
 			float: left;
 			margin-right: 26px;
 		}
-			.b-top-excurs .b-block .tabs li a{
+			.tabs li a{
 				font-family: "museo_sans_cyrl300";
 				font-size: 18px;
 				line-height: 1.2;
 				color: #323232;
 				border-radius: 17px;
-				border: 2px solid #02baea;
+				border: 2px solid #00CEFC;
 				padding: 6px 14px 5px;
 				display: block;
 			}
-			.b-top-excurs .b-block .tabs li a:hover{
+			.tabs li a:hover{
 				background-color: #cfeff9;
 			}
-			.b-top-excurs .b-block .tabs li.active a,.b-top-excurs .b-block .tabs li.active a:hover {
+			.tabs li.active a,.tabs li.active a:hover {
 				cursor: default;
 				color: #fff;
-				background-color: #02baea;
+				background-color: #00CEFC;
 			}
 			
 			
-	.b-top-excurs .b-block .excursions{
+	.excursions{
 		
 	}
-		.b-top-excurs .b-block .excursions li{
+		.excursions li{
 			display: inline-block;
 			margin-right: 15px;
-		
 			margin-top: 45px;
 			width: 307px;
 			vertical-align: top;
-}
-		.b-top-excurs .b-block .excursions li:nth-child(3n){
+		}
+		.excursions li:nth-child(3n){
 			margin-right: 0;
 		}
-			.b-top-excurs .b-block .excursions li a{ 
+			.excursions li a{ 
 				display: block;
 			}
-			.b-top-excurs .b-block .excursions li a div{
+			.excursions li a div{
 				position: relative;
 				background-size: cover;
 				background-position: 50% 50%;
 				width: 100%;
 				height: 203px;
 			}
-				.b-top-excurs .b-block .excursions li a div span{
+				.excursions li a div span{
 					position: absolute;
 					right: -6px;
 					bottom: 18px;
@@ -466,15 +482,16 @@ p {
 					line-height: 1.75;			
 					color: #fff;
 				}
-			.b-top-excurs .b-block .excursions li a h3{ 
+			.excursions li a h3{ 
 				font-family: "museo_sans_cyrl500";
 				font-size: 18px;
 				line-height: 1.556;
 				margin-top: 14px;
 			}
-				.b-top-excurs .b-block .excursions li:hover a h3{ 
+				.excursions li:hover a h3{ 
 					text-decoration: underline;
 				}
+
 .b-reviews {
 	background-image: url("../i/reviews.jpg");
 }
@@ -483,7 +500,7 @@ p {
 		top: -53px;
 		width: 26px;
 		height: 26px;
-		border: 2px solid #02baea;
+		border: 2px solid #00CEFC;
 		border-radius: 50%;
 		cursor: pointer;
 	}
@@ -510,7 +527,7 @@ p {
 		left: 6px;
 }
 	.b-reviews .b-block .reviews-slider .arrow-cont:hover {
-		background-color: #02baea;
+		background-color: #00CEFC;
 	}
 		.b-reviews .b-block .reviews-slider .arrow-cont.left-arrow:hover span{
 			background-position: -11px 50%;
@@ -573,7 +590,7 @@ p {
 		}
 			.b-question .b-block .right input{
 				border-radius: 17px;
-				border: 2px solid #02baea;
+				border: 2px solid #00CEFC;
 				padding: 8px 14px 7px;
 				margin-right: 10px;
 				width: 160px;
@@ -583,13 +600,13 @@ p {
 			}
 			.b-question .b-block .right input[type=submit]{
 				color: #fff;
-				background-color: #02baea;
+				background-color: #00CEFC;
 				margin-right: 0;
 				cursor: pointer;
 			}
 			.b-question .b-block .right input[type=submit]:hover{
-				background-color: #02A0CA;
-				border: 2px solid #02A0CA;
+				background-color: #00B7E8;
+				border: 2px solid #00B7E8;
 			}
 .b-footer {
 	background-color: #363636;
@@ -618,7 +635,7 @@ p {
 			.b-footer .b-block  .line{
 				width: 141px;
 				height: 2px;
-				background-color: #02baea;
+				background-color: #00CEFC;
 			}
 			.b-footer .b-block .right .line{
 				margin-bottom: 10px;
@@ -654,7 +671,7 @@ p {
 					}
 						.b-footer .b-block  .footer-menu li .footer-submenu li:before {
 						    content: "•";
-						    color: #02baea;
+						    color: #00CEFC;
 						    font-size: 10px;
 						    position: absolute;
 						    top: 9px;
@@ -666,26 +683,149 @@ p {
 
 }
 	.city-tabs .b-block{
+    padding-top: 15px;
 	
 	}
 		.city-tabs .b-block ul{
+    text-align: left;
 		
 		}
 			.city-tabs .b-block ul li{
 				display: inline-block;
-				margin-right: 10px;
-			}
+				margin-right: 15px;
+			
+				min-width: 210px;
+				text-align: center;
+}
 				.city-tabs .b-block ul li a{
 					color: #fff;
 					display: block;
-					font-family: "museo_sans_cyrl500";
+					padding: 16px 0 9px;
+					font-family: "museo_sans_cyrl300";
 					font-size: 18px;
 					line-height: 1.2;    
-					border-radius: 5px 5px 0 0; 
-					background-color: #02baea;
-					box-shadow: inset 0px 5px 6.93px 0.07px rgba(0, 0, 0, 0.13);                         
+					border-radius: 9px 9px 0 0; 
+					background-color: #00CEFC;
+					box-shadow: inset 0px -4px 16.93px 3.07px rgba(0, 0, 0, 0.13);                         
 				}
-
+				.city-tabs .b-block ul li.active a {
+					font-family: "museo_sans_cyrl500";
+					color: #00CEFC;
+					background-color: #f8f8f8;
+					box-shadow: 0px -5px 6px -2px rgba(0, 0, 0, 0.09);
+				}
+.b-filter {
+	background-color: #f8f8f8;
+}
+	.b-filter .b-block {
+    padding-top: 42px;
+    padding-bottom: 44px;
+		
+	}
+		.b-filter .b-block .tabs li{
+			margin-right: 15px;
+		}
+			.b-filter .b-block .tabs li a{
+				font-size: 14px;
+				border-radius: 17px;
+				padding: 7px 19px 5px;
+			}
+		.b-filter .b-block .filter-items {
+		    margin-top: 34px;	
+		    margin-left: 14px;
+		}
+			.b-filter .b-block .filter-items li{
+				font-family: "museo_sans_cyrl300";
+				font-size: 18px;
+				line-height: 1.2;
+				color: #00CEFC;
+				cursor: pointer;
+				float: left;
+				position: relative;
+				margin-right: 35px;
+			}
+			.icon:before {
+				background-image: url("../i/filter-icons.png");
+				background-repeat: no-repeat;
+				background-position-y: 100%;
+				position: absolute;
+				height: 14px;
+				width: 11px;	
+				content: "s";
+				font-size: 0px;
+				top: 1px;
+				left: -13px;
+			}
+			.icon.filter-price:before {
+				background-position-x: 0px;
+				width: 8px;		
+			}
+			.icon.filter-timetable:before {
+				background-position-x: -8px;		
+				top: 2px;
+				left: -15px;
+			}
+			.icon.filter-duration:before {
+				background-position-x: -19px;		
+				top: 2px;
+				left: -14px;
+			}
+			.icon.filter-location:before {
+				background-position-x: -30px;
+				width: 10px;
+			}
+.b-excurs-list {
+	text-align: left;
+}
+	.b-excurs-list .b-block {
+		padding-top: 35px;
+	}
+	.b-excurs-list .b-block .excursions {
+    	margin-top: 25px;
+	}
+		.b-excurs-list .b-block .excursions li{
+    		margin-top: 0;
+    		vertical-align: bottom;
+		
+    		margin-bottom: 43px;
+}	
+			.b-excurs-list .b-block .excursions li a{
+	    		margin-top: 0;
+	    		vertical-align: bottom;
+			}
+				.b-excurs-list .b-block .excursions li a h3{
+					margin-top: 0;		
+					margin-bottom: 16px;
+				}
+				.b-excurs-list .b-block .excursions li h5{
+					font-family: "museo_sans_cyrl300";
+					position: relative;
+					font-size: 14px;
+					line-height: 1.2;
+					color: #00CEFC;
+					margin-left: 16px;
+	   				
+					margin-top: 9px;
+				}
+					.b-excurs-list .b-block .excursions li h5 span{
+						font-family: "museo_sans_cyrl100";
+						color: #7e7e7e;
+						margin-left: 6px;
+					}
+					.b-excurs-list .b-block .excursions li h5:before {
+						top: -1px;
+						left: -16px;
+					}
+				.b-excurs-list .b-block .excursions li h4{
+					font-family: "museo_sans_cyrl500";
+					font-size: 24px;
+					color: #282828;
+				
+					margin-top: 2px;
+}
+				.b-excurs-list .b-block .excursions li .price {
+					margin-top: 10px;
+				}
 @media screen and (max-width: 1250px){
 	
 }
