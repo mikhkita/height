@@ -52,11 +52,11 @@ $(document).ready(function(){
         $(".b-main-menu ul li").hover(function(){
                 $("#b-hov").css("margin-left","0");
                 clearTimeout(timeout);
-                setHoverTo($(this),0.4);
+                setHoverTo($(this),0.3);
             },function(){
                     timeout = setTimeout(function(){
-                        setHoverTo($(".b-main-menu ul li.active"),0.5);
-                    },500);
+                        setHoverTo($(".b-main-menu ul li.active"),0.4);
+                    },400);
             });
     }
 
@@ -73,21 +73,21 @@ $(document).ready(function(){
         infinite: true,
         speed: 500,
         fade: true,
-        cssEase: 'linear',
+        cssEase: 'ease-out',
         arrows: false
     });
 
     $( "#city-list li" ).hover(
         function() {
-            $(this).find(".city-desc").slideDown();
+            $(this).find(".city-desc").slideDown(300);
         }, function() {
-            $(this).find(".city-desc").slideUp();
+            $(this).find(".city-desc").slideUp(300);
         }
     );
 
     $('.reviews-slider').slick({
         infinite: true,
-        speed: 200,
+        speed: 300,
         autoplay: true,
         prevArrow: '<div class="arrow-cont left-arrow"><span class=" arrow"></span></div>',
         nextArrow: '<div class="arrow-cont right-arrow"><span class=" arrow"></span></div>'

@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @font-face {
     font-family: 'museo_sans_cyrl100';
     src: url('../fonts/museosanscyrl.eot');
@@ -548,7 +550,7 @@ p {
 		padding-top: 29px;
 	
 		text-align: left;
-		padding-bottom: 43px;
+		padding-bottom: 29px;
 }
 
 		.b-question .b-block .left{
@@ -567,7 +569,7 @@ p {
 				margin-top: 7px;
 			}
 		.b-question .b-block .right {
-    		margin-top: 19px;
+    		margin-top: 18px;
 		}
 			.b-question .b-block .right input{
 				border-radius: 17px;
