@@ -89,10 +89,47 @@ $(document).ready(function(){
         infinite: true,
         speed: 300,
         autoplay: true,
+        adaptiveHeight: true,
         prevArrow: '<div class="arrow-cont left-arrow"><span class=" arrow"></span></div>',
         nextArrow: '<div class="arrow-cont right-arrow"><span class=" arrow"></span></div>'
     });
-    
+    $('.desc-slider').slick({
+        infinite: true,
+        speed: 300,
+        autoplay: true,
+        prevArrow: '<span class="left-arrow arrow"></span>',
+        nextArrow: '<span class="right-arrow arrow"></span>'
+    });
+
+    $("#search").click(function(){
+        $(this).css("border","2px solid #00CEFC");
+        $(".b-main-menu ul li a").animate({
+            paddingLeft: "7px",
+            paddingRight: "7px"
+          }, 500, function() {
+            setHoverTo($(".b-main-menu ul li.active"),0.2);
+        });
+        
+        $(this).animate({
+            width: "150px"
+          }, 500, function() {
+            $("#search input").show();
+        });
+    });
+    $(".b-header").hover(function(){},function(){
+        $("#search input").hide();
+        $(".b-main-menu ul li a").animate({
+            paddingLeft: "15px",
+            paddingRight: "15px"
+          }, 500, function() {
+            setHoverTo($(".b-main-menu ul li.active"),0.2);
+        });
+        $("#search").animate({
+            width: "36px"
+          }, 500, function() {
+            $("#search").css("border","2px solid #fff");
+        });   
+    });
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
  //        zoom: 16,
