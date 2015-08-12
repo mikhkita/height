@@ -80,7 +80,7 @@ input.error,textarea.error{
 	border: 2px solid #F97171 !important;
 }
 .ps-lines{
-
+	display: none;
 }
 	.ps-lines li.v{
 		position: fixed;
@@ -263,10 +263,10 @@ p {
 					.b-header .b-block .b-search-cont > div .search input[type="text"] {
 						border: none;
 						font-family: "museo_sans_cyrl300";
-						font-size: 16px;
+						font-size: 15px;
 						display: none;
 						width: 130px;
-						padding: 7px 0 7px;
+						padding: 8px 0 7px;
 						margin-right: 15px;
 					}
 					.b-header .b-block .b-search-cont > div .search input[type="submit"]{
