@@ -104,29 +104,30 @@ $(document).ready(function(){
     $("#search").click(function(){
         $(this).css("border","2px solid #00CEFC");
         $(".b-main-menu ul li a").animate({
-            paddingLeft: "7px",
-            paddingRight: "7px"
-          }, 500, function() {
+            paddingLeft: "4px",
+            paddingRight: "4px"
+          }, 200, function() {
             setHoverTo($(".b-main-menu ul li.active"),0.2);
         });
         
         $(this).animate({
-            width: "150px"
-          }, 500, function() {
-            $("#search input").show();
+            width: "180px"
+          }, 200, function() {
+            $("#search input").fadeIn(150);
+            $("#search input[type='text']").focus();
         });
     });
-    $(".b-header").hover(function(){},function(){
-        $("#search input").hide();
+    $("#search input").blur(function(){
+        $("#search input").fadeOut(100);
         $(".b-main-menu ul li a").animate({
             paddingLeft: "15px",
             paddingRight: "15px"
-          }, 500, function() {
+          }, 200, function() {
             setHoverTo($(".b-main-menu ul li.active"),0.2);
         });
         $("#search").animate({
             width: "36px"
-          }, 500, function() {
+          }, 200, function() {
             $("#search").css("border","2px solid #fff");
         });   
     });
