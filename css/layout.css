@@ -661,11 +661,10 @@ p {
 
 }
 	.b-question .b-block {
-		padding-top: 29px;
-	
+		padding-top: 43px;
 		text-align: left;
 		padding-bottom: 43px;
-}
+	}
 
 		.b-question .b-block .left{
 			width: 240px;
@@ -681,9 +680,8 @@ p {
 				font-size: 16px;
 				line-height: 1.375;
 				margin-top: 7px;
-			
 				color: #5a5a5a;
-}
+			}
 		.b-question .b-block .right {
     		margin-top: 18px;
 		}

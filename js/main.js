@@ -71,7 +71,8 @@ $(document).ready(function(){
         autoplay: true,
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,
+        autoplaySpeed: 4000,
         fade: true,
         cssEase: 'ease-out',
         arrows: false
