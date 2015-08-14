@@ -636,6 +636,7 @@ p {
 			.b-reviews .b-block .review .photo{
 				width: 140px;
 				height: 140px;
+				background-size: cover;
 				border-radius: 50%;
 				background-position: 50% 0%;
 			}
