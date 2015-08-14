@@ -504,21 +504,21 @@ p {
 		.tabs li{
 			float: left;
 			margin-right: 26px;
+			font-family: "museo_sans_cyrl300";
+			font-size: 18px;
+			line-height: 1.2;
+			color: #323232;
+			border-radius: 17px;
+			border: 2px solid #00CEFC;
+			padding: 6px 14px 5px;
+			display: block;
+
 		}
-			.tabs li a{
-				font-family: "museo_sans_cyrl300";
-				font-size: 18px;
-				line-height: 1.2;
-				color: #323232;
-				border-radius: 17px;
-				border: 2px solid #00CEFC;
-				padding: 6px 14px 5px;
-				display: block;
-			}
-			.tabs li a:hover{
+			.tabs li:hover{
 				background-color: #cfeff9;
+				cursor: pointer;
 			}
-			.tabs li.active a,.tabs li.active a:hover {
+			.tabs li.active,.tabs li.active:hover {
 				cursor: default;
 				color: #fff;
 				background-color: #00CEFC;
@@ -858,12 +858,10 @@ p {
 	}
 		.b-filter .b-block .tabs li{
 			margin-right: 15px;
+			font-size: 14px;
+			border-radius: 17px;
+			padding: 7px 19px 6px;
 		}
-			.b-filter .b-block .tabs li a{
-				font-size: 14px;
-				border-radius: 17px;
-				padding: 7px 19px 6px;
-			}
 		.b-filter .b-block .filter-items {
 		    margin-top: 34px;	
 		    margin-left: 14px;

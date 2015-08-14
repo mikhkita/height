@@ -28,6 +28,7 @@
 	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/slick.js"></script>
+	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/KitProgress.js"></script>
 	<script type="text/javascript" src="js/KitAnimate.js"></script>
@@ -54,13 +55,23 @@
 						<li class="menu-item">
 							<a href="#">Экскурсии</a>
 							<ul>
-								<li><a href="#">Услуги</a></li>
-								<li><a href="#">Визы зарубеж</a></li>
-								<li><a href="#">Информация</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li><a href="#">по&nbsp;Москве</a></li>
+								<li><a href="#">по&nbsp;СПб</a></li>
+								<li><a href="#">в&nbsp;Новгород</a></li>
+								<li><a href="#">по&nbsp;Золотому кольцу</a></li>
 							</ul>
 						</li>
-						<li class="menu-item"><a href="#">Услуги</a></li>
+						<li class="menu-item">
+							<a href="#">Услуги</a>
+							<ul>
+								<li><a href="#">Пансионаты</a></li>
+								<li><a href="#">Отдых в подмосковье</a></li>
+								<li><a href="#">Транспортное обслуживание</a></li>
+								<li><a href="#">Бронирование Авиа/Жд билетов</a></li>
+								<li><a href="#">Корпоративный отдых</a></li>
+								<li><a href="#">Визы зарубеж</a></li>
+							</ul>
+						</li>
 						<li class="active menu-item"><a href="#">Визы зарубеж</a></li>
 						<li class="menu-item"><a href="#">Информация</a></li>
 						<li class="menu-item"><a href="#">Контакты</a></li>
@@ -115,11 +126,11 @@
 		<div class="b-filter">
 			<div class="b-block">
 				<ul class="tabs clearfix">
-					<li><a href="#">Все</a></li>
-					<li class="active"><a href="#">По Москве</a></li>
-					<li><a href="#">По Золотому кольцу</a></li>
-					<li><a href="#">В подмосковье</a></li>
-					<li><a href="#">Для школьников</a></li>
+					<li data-tab="all" >Все</li>
+					<li data-tab="id-1" class="active">По Москве</li>
+					<li data-tab="id-2">по Золотому кольцу</li>
+					<li data-tab="id-3">В подмосковье</li>
+					<li data-tab="id-4">Для школьников</li>
 				</ul>
 				<ul class="filter-items clearfix">
 					<li class="icon filter-price">
@@ -172,9 +183,9 @@
 			<div class="b-block">
 				<h2 class="title">Незабываемые экскурсии по Москве и Подмосковью</h2>
 				<ul class="excursions bot">
-					<li>
+					<li class="id-1">
 						<a href="#">
-							<h3>Название экскурсии (может быть длинным)</h3>
+							<h3>Название экскурсии (может быть длинным) 1</h3>
 							<div style='background-image: url("i/top-exc-1.jpg");'></div>	
 						</a>
 						<h5 class="icon filter-timetable">Расписание:<span>Пн / Чт / Сб</span></h5>
@@ -185,9 +196,9 @@
 							<a class="b-blue-butt right" href="#">Забронировать</a>
 						</div>
 					</li>
-					<li>
-						<a href="#">
-							<h3>Название экскурсии (может быть длинным)</h3>
+					<li class="id-2">
+						<a href="#"> 
+							<h3>Название экскурсии (может быть длинным) 2</h3>
 							<div style='background-image: url("i/top-exc-1.jpg");'></div>	
 						</a>
 						<h5 class="icon filter-timetable">Расписание:<span>Пн / Чт / Сб</span></h5>
@@ -198,9 +209,9 @@
 							<a class="b-blue-butt right" href="#">Забронировать</a>
 						</div>
 					</li>
-					<li>
+					<li class="id-3">
 						<a href="#">
-							<h3>Название экскурсии (может быть длинным)</h3>
+							<h3>Название экскурсии (может быть длинным) 3</h3>
 							<div style='background-image: url("i/top-exc-1.jpg");'></div>	
 						</a>
 						<h5 class="icon filter-timetable">Расписание:<span>Пн / Чт / Сб</span></h5>
@@ -211,9 +222,9 @@
 							<a class="b-blue-butt right" href="#">Забронировать</a>
 						</div>
 					</li>
-					<li>
+					<li class="id-4">
 						<a href="#">
-							<h3>Название экскурсии (может быть длинным)</h3>
+							<h3>Название экскурсии (может быть длинным) 4</h3>
 							<div style='background-image: url("i/top-exc-1.jpg");'></div>	
 						</a>
 						<h5 class="icon filter-timetable">Расписание:<span>Пн / Чт / Сб</span></h5>
