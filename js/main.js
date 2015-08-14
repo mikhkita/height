@@ -49,13 +49,13 @@ $(document).ready(function(){
         });
         
 
-        $(".b-main-menu ul li").hover(function(){
+        $(".b-main-menu ul li.menu-item").hover(function(){
                 $("#b-hov").css("margin-left","0");
                 clearTimeout(timeout);
                 setHoverTo($(this),0.3);
             },function(){
                     timeout = setTimeout(function(){
-                        setHoverTo($(".b-main-menu ul li.active"),0.4);
+                        setHoverTo($(".b-main-menu ul li.menu-item.active"),0.4);
                     },400);
             });
     }
@@ -132,42 +132,39 @@ $(document).ready(function(){
             $("#search").css("border","2px solid #fff");
         });   
     });
-    if($(".slider-range").length>0) {
-	    $( ".slider-range" ).slider({
-	        range: true,
-	        min: 600,
-	        max: 1000,
-	        values: [ 600, 1000 ],
-	        slide: function( event, ui ) {
-	            $( "#amount-l" ).text( ui.values[ 0 ] );
-	            $( "#amount-r" ).text( ui.values[ 1 ] );
-	            $( "#price-min" ).val( ui.values[ 0 ] );
-	            $( "#price-max" ).val( ui.values[ 1 ] );
 
-	        },
-	    change: function( event, ui ) {
-	        
-	    }
-	    });
-	    $( "#amount-l" ).text( $( "#slider-range" ).slider( "values", 0 ) );
-	    $( "#amount-r" ).text( $( "#slider-range" ).slider( "values", 1 ) );
-	    $( "#price-min" ).val( $( "#slider-range" ).slider( "values", 0 ) );
-	    $( "#price-max" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+
+    if($("#price-range").length > 0) {
+    	range_init("price");
 	}
+
+	 if($("#time-range").length > 0) {
+    	range_init("time");
+	}
+
+
 
     $(".filter-items li span").click(function(){
         if(!$(this).closest("li").hasClass("active")) {
+        	
             $(".filter-items li.active").removeClass("active").find(".filter-popup").slideUp(200);
             $(this).closest("li").addClass("active").find(".filter-popup").slideDown();
+            // alert();
+   //          $("*").bind("click",function() {
+   //          	console.log($(this));
+			// 	if( !$(this).parents(".filter-popup").length && !$(this).hasClass("filter-popup") ) {
+			// 		$(".filter-items li.active").removeClass("active").find(".filter-popup").slideUp(200);
+			// 	}
+			// });
         }
         else {
+        	// alert();
             $(".filter-items li.active").removeClass("active").find(".filter-popup").slideUp(200);
+            // $("*").unbind("click");
         }
     });
 
-    $("*:not(.filter-items *)").click(function(){
-    	$(".filter-items li.active").removeClass("active").find(".filter-popup").slideUp(200);
-    });
+    
 
     $('.tabs li').click(function() {
     	if(!$(this).hasClass("active")) {
@@ -185,6 +182,24 @@ $(document).ready(function(){
     		});
     	}
     });
+
+    function range_init(name) {
+    	var min_val = $( "#"+name+"-min" ).val()*1,
+    	max_val = $( "#"+name+"-max" ).val()*1;
+	    $( "#"+name+"-range" ).slider({
+	        range: true,
+	        min: min_val,
+	        max: max_val,
+	        values: [ min_val, max_val ],
+	        slide: function( event, ui ) {
+	            $( "#"+name+"-l" ).text( ui.values[ 0 ] );
+	            $( "#"+name+"-r" ).text( ui.values[ 1 ] );
+	            $( "#"+name+"-min" ).val( ui.values[ 0 ] );
+	            $( "#"+name+"-max" ).val( ui.values[ 1 ] );
+
+	        }
+	    });
+    }
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
  //        zoom: 16,

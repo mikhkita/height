@@ -58,22 +58,28 @@
 								<li><a href="#">по&nbsp;Москве</a></li>
 								<li><a href="#">по&nbsp;СПб</a></li>
 								<li><a href="#">в&nbsp;Новгород</a></li>
-								<li><a href="#">по&nbsp;Золотому кольцу</a></li>
+								<li><a href="#">по&nbsp;Золотому&nbsp;кольцу</a></li>
 							</ul>
 						</li>
 						<li class="menu-item">
 							<a href="#">Услуги</a>
 							<ul>
 								<li><a href="#">Пансионаты</a></li>
-								<li><a href="#">Отдых в подмосковье</a></li>
-								<li><a href="#">Транспортное обслуживание</a></li>
-								<li><a href="#">Бронирование Авиа/Жд билетов</a></li>
-								<li><a href="#">Корпоративный отдых</a></li>
-								<li><a href="#">Визы зарубеж</a></li>
+								<li><a href="#">Отдых&nbsp;в&nbsp;подмосковье</a></li>
+								<li><a href="#">Транспортное&nbsp;обслуживание</a></li>
+								<li><a href="#">Бронирование&nbsp;Авиа&nbsp;/&nbsp;Жд&nbsp;билетов</a></li>
+								<li><a href="#">Корпоративный&nbsp;отдых</a></li>
+								<li><a href="#">Визы&nbsp;зарубеж</a></li>
 							</ul>
 						</li>
 						<li class="active menu-item"><a href="#">Визы зарубеж</a></li>
-						<li class="menu-item"><a href="#">Информация</a></li>
+						<li class="menu-item">
+							<a href="#">Информация</a>
+							<ul>
+								<li><a href="#">Полезно&nbsp;знать</a></li>
+								<li><a href="#">Энциклопедия&nbsp;бюро</a></li>
+							</ul>
+						</li>
 						<li class="menu-item"><a href="#">Контакты</a></li>
 					</ul>
 				</div>
@@ -81,7 +87,7 @@
 			<div class="b-date-cont right">
 				<div>
 					<h2>+7 (800) 556-77-66</h2>
-					<a href="#">Заказать звонок</a>
+					<a href="#" class="fancy" data-block="#b-popup-1">Заказать звонок</a>
 				</div>
 			</div>
 		</div>
@@ -133,15 +139,18 @@
 					<li data-tab="id-4">Для школьников</li>
 				</ul>
 				<ul class="filter-items clearfix">
+					<form action="#">
 					<li class="icon filter-price">
 						<span>Цена</span>
 						<div class="filter-popup slider">
 							<div class="popup-slider">
 								<div class="slider-text clearfix">
-			                            <h3 class="left"><span class="amount-l">600</span> р.</h3>
-			                            <h3 class="right" style="margin-right:7px;"><span class="amount-r">2000 р.</span></h3>
+			                            <h3 class="left"><span id="price-l">600</span> р.</h3>
+			                            <h3 class="right"><span id="price-r">2000</span> р.</h3>
+			                            <input type="hidden" name="price-min" id="price-min" value="600">
+			                            <input type="hidden" name="price-max" id="price-max" value="2000">
 			                    </div>
-			                    <div class="slider-range"></div>
+			                    <div class="slider-range" id="price-range"></div>
 		                    </div>
 	                    </div>
 					</li>
@@ -150,32 +159,94 @@
 						<div class="filter-popup clearfix">
 						 	<ul>
 						 		<li>
-								<input type="checkbox" id="t1" name="timetable[]" value="monday">
-		                        <label for="t1">
-		                            <span class="checked"></span>  
-		                            <h3>Взрослые</h3>
-		                        </label>
+									<input type="checkbox" id="t1" name="timetable[]" value="Понедельник">
+			                        <label for="t1">
+			                            <span class="checked"></span>  
+			                            <h3>Понедельник</h3>
+			                        </label>
 		                        </li>
 		                        <li>
-								<input type="checkbox" id="t2" name="timetable[]" value="monday">
-		                        <label for="t2">
-		                            <span class="checked"></span>  
-		                            <h3>Дети до 3 лет</h3>
-		                        </label>
+									<input type="checkbox" id="t2" name="timetable[]" value="Вторник">
+			                        <label for="t2">
+			                            <span class="checked"></span>  
+			                            <h3>Вторник</h3>
+			                        </label>
 		                        </li>
 		                        <li>
-								<input type="checkbox" id="t3" name="timetable[]" value="monday">
-		                        <label for="t3">
-		                            <span class="checked"></span>  
-		                            <h3>Дети до 12 лет</h3>
-		                        </label>
+									<input type="checkbox" id="t3" name="timetable[]" value="Среда">
+			                        <label for="t3">
+			                            <span class="checked"></span>  
+			                            <h3>Среда</h3>
+			                        </label>
+		                        </li>
+		                        <li>
+									<input type="checkbox" id="t4" name="timetable[]" value="Четверг">
+			                        <label for="t4">
+			                            <span class="checked"></span>  
+			                            <h3>Четверг</h3>
+			                        </label>
+		                        </li>
+		                        <li>
+									<input type="checkbox" id="t5" name="timetable[]" value="Пятница">
+			                        <label for="t5">
+			                            <span class="checked"></span>  
+			                            <h3>Пятница</h3>
+			                        </label>
+		                        </li>
+		                        <li>
+									<input type="checkbox" id="t6" name="timetable[]" value="Суббота">
+			                        <label for="t6">
+			                            <span class="checked"></span>  
+			                            <h3>Суббота</h3>
+			                        </label>
+		                        </li>
+		                        <li>
+									<input type="checkbox" id="t7" name="timetable[]" value="Воскресенье">
+			                        <label for="t7">
+			                            <span class="checked"></span>  
+			                            <h3>Воскресенье</h3>
+			                        </label>
 		                        </li>
 		                    </ul>
-		                   
+
 	                    </div>
 					</li>
-					<li class="icon filter-duration">Длительность</li>
-					<li class="icon filter-location">Место расположения</li>
+					<li class="icon filter-duration">
+						<span>Длительность</span>
+						<div class="filter-popup slider">
+							<div class="popup-slider">
+								<div class="slider-text clearfix">
+			                            <h3 class="left"><span id="time-l">1</span> ч.</h3>
+			                            <h3 class="right"><span id="time-r">5</span> ч.</h3>
+			                            <input type="hidden" name="time-min" id="time-min" value="1">
+			                            <input type="hidden" name="time-max" id="time-max" value="5">
+			                    </div>
+			                    <div class="slider-range" id="time-range"></div>
+		                    </div>
+	                    </div>
+					</li>
+					<li class="icon filter-location">
+						<span>Место расположения</span>
+						<div class="filter-popup clearfix">
+							<ul>
+						 		<li>
+									<input type="checkbox" id="l1" name="location[]" value="Авиамоторная">
+			                        <label for="l1">
+			                            <span class="checked"></span>  
+			                            <h3>Авиамоторная</h3>
+			                        </label>
+		                        </li>
+		                        <li>
+									<input type="checkbox" id="l2" name="location[]" value="Александровский сад">
+			                        <label for="l2">
+			                            <span class="checked"></span>  
+			                            <h3>Александровский&nbsp;сад</h3>
+			                        </label>
+		                        </li>
+			                </ul>
+		                </div>
+					</li>
+					</form>
 				</ul>
 			</div>
 		</div>
@@ -325,17 +396,15 @@
 	</div>
 <div style="display:none;">
 	<div id="b-popup-1">
-			<div class="for_all b-popup" >
-				<h3>Оставьте заявку</h3>
-				<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>
+			<div class="for_all b-popup">
+				<h3>Оставьте заявку и мы свяжемся с вами в течение 30 минут</h3>
 				<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-1">
 					<div class="b-popup-form">
-						<label for="name">Введите Ваше имя</label>
-						<input type="text" id="name" name="name" required/>
-						<label for="tel">Введите Ваш номер телефона</label>
-						<input type="text" id="tel" name="phone" required/>
-						<input type="hidden" name="subject" value="Заказ"/>
-						<input type="submit" class="ajax b-orange-butt" value="Заказать">
+						<input type="text" name="name" placeholder="Ваше имя" required/>
+						<input type="text" name="phone" placeholder="Ваш телефон" required/>
+						<input type="text" name="email" placeholder="Ваш e-mail"/>
+						<input type="hidden" name="subject" value="Обратный звонок"/>
+						<input type="submit" class="ajax b-blue-butt" value="Заказать">
 					</div>
 				</form>
 			</div>
@@ -343,15 +412,15 @@
 		<div id="b-popup-2">
 			<div class="b-thanks b-popup">
 				<h3>Спасибо!</h3>
-				<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
-				<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+				<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами.</h4>
+				<input type="submit" class="b-blue-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
 			</div>
 		</div>
 		<div id="b-popup-error">
 			<div class="b-thanks b-popup">
 				<h3>Ошибка отправки!</h3>
 				<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
-				<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+				<input type="submit" class="b-blue-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
 			</div>
 		</div>
 	</div>
