@@ -132,6 +132,38 @@ $(document).ready(function(){
             $("#search").css("border","2px solid #fff");
         });   
     });
+
+    $( ".slider-range" ).slider({
+        range: true,
+        min: 600,
+        max: 1000,
+        values: [ 600, 1000 ],
+        slide: function( event, ui ) {
+            $( "#amount-l" ).text( ui.values[ 0 ] );
+            $( "#amount-r" ).text( ui.values[ 1 ] );
+            $( "#price-min" ).val( ui.values[ 0 ] );
+            $( "#price-max" ).val( ui.values[ 1 ] );
+
+        },
+    change: function( event, ui ) {
+        
+    }
+    });
+    $( "#amount-l" ).text( $( "#slider-range" ).slider( "values", 0 ) );
+    $( "#amount-r" ).text( $( "#slider-range" ).slider( "values", 1 ) );
+    $( "#price-min" ).val( $( "#slider-range" ).slider( "values", 0 ) );
+    $( "#price-max" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+
+
+    $(".filter-items li span").click(function(){
+        if(!$(this).closest("li").hasClass("active")) {
+            $(".filter-items li.active").removeClass("active").find(".filter-popup").slideUp(200);
+            $(this).closest("li").addClass("active").find(".filter-popup").slideDown();
+        }
+        else {
+            $(".filter-items li.active").removeClass("active").find(".filter-popup").slideUp(200);
+        }
+    });
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
  //        zoom: 16,

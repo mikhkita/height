@@ -189,19 +189,47 @@ p {
 			.b-header .b-block .b-main-menu > div {
 				display: table-cell;
 				vertical-align: middle;
+				
 			}
 		.b-header .b-block .b-main-menu ul {
 		}
-			.b-header .b-block .b-main-menu ul li {
+			.b-header .b-block .b-main-menu ul li.menu-item {
 				float: left;
 				margin-right: 5px;
+				position: relative;
+			}
+			.b-header .b-block .b-main-menu ul li.menu-item:hover ul {
+				display: block;
 			}
 			.b-header .b-block .b-main-menu ul li.active{
 			}
-				.b-header .b-block .b-main-menu ul li a{
+				.b-header .b-block .b-main-menu ul li.menu-item a{
 					padding: 15px;		
 					display: block;
+				
+}
+			.b-header .b-block .b-main-menu ul li.menu-item ul {
+				padding: 5px 0 5px;
+				background-color: #00CEFC;
+				position: absolute;
+				display: block;
+				border-radius: 4px;
+				top: 40px;
+				text-align: left;
+				display: none;
+			}
+				.b-header .b-block .b-main-menu ul li.menu-item ul li{
+			
 				}
+					.b-header .b-block .b-main-menu ul li.menu-item ul li a{
+						color: #fff;
+						padding: 10px 15px;
+						font-size: 16px;
+						font-family: 'museo_sans_cyrl100';
+					}
+						.b-header .b-block .b-main-menu ul li.menu-item ul li a:hover {
+							text-decoration: underline;
+						}
 		.b-header .b-block .b-date-cont {
 			text-align: right;
 			display: table;
@@ -840,7 +868,7 @@ p {
 		    margin-top: 34px;	
 		    margin-left: 14px;
 		}
-			.b-filter .b-block .filter-items li{
+			.b-filter .b-block .filter-items li.icon{
 				font-family: "museo_sans_cyrl300";
 				font-size: 18px;
 				line-height: 1.2;
@@ -850,11 +878,123 @@ p {
 				position: relative;
 				margin-right: 35px;
 			}
-				.b-filter .b-block .filter-items li:hover {
+				.b-filter .b-block .filter-items li.icon:hover {
 					text-decoration: underline;
 				}
+				.b-filter .b-block .filter-items li.icon .filter-popup {
+					display: none;
+					min-width: 140px;
+					padding: 15px 15px 8px 22px;
+					border: 2px solid #00CEFC;
+					position: absolute;		
+					z-index: 999;
+					top: 34px;
+					left: -13px;
+					background-color: #00CEFC;
+				}
+				
+				.b-filter .b-block .filter-items li .filter-popup.slider {
+					background-color: #fff;
+					padding: 15px 6px 15px 15px;
+				}
+				.b-filter .b-block .filter-items li .filter-popup .popup-slider {				
+				    margin-bottom: 9px;
+				    margin-top: 2px;
+				}
+				.b-filter .b-block .filter-items li .filter-popup .popup-slider .slider-text{
+				    width: 203px;
+				}
+				.b-filter .b-block .filter-items li .filter-popup h3 {
+					font-family: "museo_sans_cyrl300";
+					font-size: 12px;
+				}
+				.b-filter .b-block .filter-items .slider-range {
+					background-color: #75ecff;
+					height: 5px;
+					width: 159px;
+					margin-left: 14px;
+					margin-top: 9px;
+				}
+				.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+					background: url("../i/slider-range.png") no-repeat;
+					border:none;
+					width: 20px;
+					height: 15px;
+					cursor: pointer;
+					top: -5px;
+				}
+
+
+
+				.b-main .b-block .b-main-filter .filter-cont .check-cont {
+					max-height: 195px;
+					margin-top: 16px;
+					overflow: auto;
+				}
+					.b-filter .b-block .filter-items li.icon .filter-popup ul {
+						display: block;
+						float: left;
+					}
+					.b-filter .b-block .filter-items li.icon .filter-popup ul:nth-child(n+2) {
+						margin-left: 22px;
+					}
+					.b-filter .b-block .filter-items li.icon .filter-popup ul li {
+						margin-bottom: 7px;
+					}
+					.b-filter .b-block .filter-items li.icon .filter-popup li input {
+						display: none;
+					}
+					.b-filter .b-block .filter-items li.icon .filter-popup li input:checked + label .checked {
+						display: block;
+					}
+					.b-filter .b-block .filter-items li.icon .filter-popup li label {
+						display: block;
+						cursor: pointer; 
+						position: relative;
+					}
+						.b-filter .b-block .filter-items li.icon .filter-popup li label .checked {
+							display: none;
+							position: absolute;
+							top: 1px;
+							left: -9px;
+							border: 2px solid #fff;
+  							border-radius: 4px;
+  							width: 7px;
+  							height: 7px;
+  							background: url("../i/check.png") no-repeat;
+  							
+							background-position: 50% 50%;
+						
+							background-size: 115%;
+}
+
+span.checked {}
+						.b-filter .b-block .filter-items li.icon .filter-popup li label h3 {
+							padding-left: 9px;
+							/* max-width: 138px; */
+							color: #fff;
+							position: relative;
+							text-align: left;
+}
+						.b-filter .b-block .filter-items li.icon .filter-popup li label h3:before {
+							position: absolute;
+							font-size: 0;
+							content: "s";
+							top: 0px;
+							left: -10px;
+							border: 2px solid #fff;
+  							border-radius: 4px;
+  							width: 9px;
+  							height: 9px;
+						}
+
+
+
+
+				
+
 		.b-filter .b-block .filter-items .icon.filter-age {
-		padding-left: 3px;
+			padding-left: 3px;
 		}
 			.icon:before {
 				background-image: url("../i/filter-icons.png");
