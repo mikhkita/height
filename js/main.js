@@ -200,8 +200,8 @@ $(document).ready(function(){
     		max_text = $(this).closest(".popup-slider").find(".max-text"),
     		min_val = $(this).attr("data-min")*1,
     		max_val = $(this).attr("data-max")*1,
-    		cur_min_val = $(this).attr("data-min-cur")*1,
-    		cur_max_val = $(this).attr("data-max-cur")*1,
+    		cur_min_val = $(this).attr("data-min-cur") ? $(this).attr("data-min-cur")*1 : min_val,
+    		cur_max_val = $(this).attr("data-max-cur") ? $(this).attr("data-max-cur")*1 : max_val,
     		data_step = $(this).attr("data-step") ? $(this).attr("data-step")*1 : 1;
 		    $(this).slider({
 		    	step: data_step,
