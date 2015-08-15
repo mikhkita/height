@@ -1208,7 +1208,7 @@ span.checked {}
 				background-position-x: 0px;
 				width: 8px;		
 			}
-			.icon.filter-timetable:before {
+			.icon.filter-schedule:before {
 				background-position-x: -8px;		
 				left: -15px;
 			}
@@ -1216,7 +1216,7 @@ span.checked {}
 				background-position-x: -19px;		
 				left: -14px;
 			}
-			.icon.filter-location:before {
+			.icon.filter-place:before {
 				background-position-x: -30px;
 				width: 10px;
 			}
