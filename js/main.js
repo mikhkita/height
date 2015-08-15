@@ -163,7 +163,7 @@ $(document).ready(function(){
             $(".filter-items li.active").removeClass("active").find(".filter-popup").slideUp(200);
     });
 
-    
+
     if( $('.tabs li').length ){
         $('.tabs li').click(function() {
             if(!$(this).hasClass("active")) {
@@ -188,8 +188,12 @@ $(document).ready(function(){
                 window.location.hash = "#"+$(this).attr("data-tab");
             }
         });
-        $(".tabs li").eq(0).click();
-
+        if(window.location.hash && window.location.hash!= "#") {
+    		var hash = window.location.hash.substr(1);
+    		$(".tabs li[data-tab="+hash+"]").click();
+    	} else {
+    		$(".tabs li").eq(0).click();
+    	}
 
     }
 
