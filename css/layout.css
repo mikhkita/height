@@ -165,8 +165,10 @@ input:-moz-placeholder {
 	width: 125px;
 	padding: 9px 0 8px;
 	display: inline-block;
+	border: none;
 	background-color: #00CEFC;
 	text-align: center;
+	cursor: pointer;
 }
 	.b-blue-butt:hover{
 		background-color: #00B7E8;
@@ -1061,7 +1063,7 @@ p {
 				}
 				.b-filter .b-block .filter-items li.icon .filter-popup {
 					display: none;
-					padding: 15px 22px 8px 22px;
+					padding: 15px 22px 15px 22px;
 					border: 2px solid #00CEFC;
 					position: absolute;		
 					z-index: 999;
@@ -1069,15 +1071,30 @@ p {
 					left: -13px;
 					background-color: #00CEFC;
 				}
-				
+				.b-filter .b-block .filter-items li .filter-popup input[type=submit] {
+					background-color: #fff;
+					color: #00CEFC;
+					width: 100px;
+				    margin-top: 10px;
+				    padding: 7px 0 6px;
+				}
+					.b-filter .b-block .filter-items li .filter-popup input[type=submit]:hover {
+						background-color: #cfeff9;
+    					
+					}
 				.b-filter .b-block .filter-items li .filter-popup.slider {
 					background-color: #fff;
 					padding: 15px;
 				}
-				.b-filter .b-block .filter-items li .filter-popup .popup-slider {				
-				    margin-bottom: 9px;
-				    margin-top: 2px;
+				.b-filter .b-block .filter-items li .filter-popup.slider input[type=submit] {
+					background-color: #00CEFC;
+					color: #fff;
+					margin-top: 20px;
+					margin-right: 10px;
 				}
+					.b-filter .b-block .filter-items li .filter-popup.slider input[type=submit]:hover {
+						background-color: #00B7E8;
+					}
 				.b-filter .b-block .filter-items li .filter-popup .popup-slider .slider-text{
 				    width: 196px;
 				}
@@ -1085,13 +1102,15 @@ p {
 					font-family: "museo_sans_cyrl300";
 					font-size: 12px;
 				}
+				
 				.b-filter .b-block .filter-items .slider-range {
 					background-color: #75ecff;
 					height: 5px;
 					width: 159px;
 					margin-left: 14px;
 					margin-top: 9px;
-				}
+				
+}
 				.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 					background: url("../i/slider-range.png") no-repeat;
 					border:none;
