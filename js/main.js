@@ -171,12 +171,17 @@ $(document).ready(function(){
                 $('.tabs li.active').removeClass("active");
                 $(this).addClass("active");
                 var filter = ($(this).attr("data-tab"));
-                $(".excursions").fadeOut(400,function(){
+                $(".b-empty").fadeOut(299);
+                $(".excursions").fadeOut(300,function(){
                     $(".excursions li").hide();
                     if(filter=="all") {
                         $(".excursions li").show();
                     } else {        
-                        $(".excursions li").filter("."+filter).show();
+                        if( $(".excursions li").filter("."+filter).length ){
+                            $(".excursions li").filter("."+filter).show();
+                        }else{
+                            $(".b-empty").fadeIn();
+                        }
                     }
                     $(".excursions").fadeIn();
                 });
@@ -203,6 +208,11 @@ $(document).ready(function(){
 	        }
 	    });
     }
+
+    $(window).load(function() {
+        $(".b-main-slider").fadeTo(300,1);
+    });
+
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
  //        zoom: 16,
