@@ -185,9 +185,11 @@ $(document).ready(function(){
                     }
                     $(".excursions").fadeIn();
                 });
+                window.location.hash = "#"+$(this).attr("data-tab");
             }
         });
         $(".tabs li").eq(0).click();
+
 
     }
 
@@ -230,6 +232,8 @@ $(document).ready(function(){
     $(window).load(function() {
         $(".b-main-slider").fadeTo(300,1);
     });
+
+
 
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
