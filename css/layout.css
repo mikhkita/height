@@ -1044,8 +1044,11 @@ p {
 			border-radius: 17px;
 			padding: 7px 19px 6px;
 		}
+		.b-filter .b-block form{
+			margin-top: 34px;
+			display: block;
+		}
 		.b-filter .b-block .filter-items {
-		    margin-top: 34px;	
 		    margin-left: 14px;
 		}
 			.b-filter .b-block .filter-items li.icon{
@@ -1090,7 +1093,7 @@ p {
 					background-color: #00CEFC;
 					color: #fff;
 					margin-top: 20px;
-					margin-right: 10px;
+					/*margin-right: 10px;*/
 				}
 					.b-filter .b-block .filter-items li .filter-popup.slider input[type=submit]:hover {
 						background-color: #00B7E8;
@@ -1583,7 +1586,21 @@ span.checked {}
 			.b-not-found h3 a:hover{
 				text-decoration: none;
 			}
-
+.remove-filter{
+	font-family: "museo_sans_cyrl300";
+	float: left;
+	margin-left: 0px;
+	border: none;
+	background-color: transparent;
+	color: #333;
+	margin-top: 2px;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+	.remove-filter:hover{
+		text-decoration: none;
+	}
 @media screen and (max-width: 1250px){
 	
 }
