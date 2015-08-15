@@ -163,7 +163,7 @@ $(document).ready(function(){
             $(".filter-items li.active").removeClass("active").find(".filter-popup").slideUp(200);
     });
 
-    
+
     if( $('.tabs li').length ){
         $('.tabs li').click(function() {
             if(!$(this).hasClass("active")) {
@@ -185,9 +185,15 @@ $(document).ready(function(){
                     }
                     $(".excursions").fadeIn();
                 });
+                window.location.hash = "#"+$(this).attr("data-tab");
             }
         });
-        $(".tabs li").eq(0).click();
+        if(window.location.hash && window.location.hash!= "#") {
+    		var hash = window.location.hash.substr(1);
+    		$(".tabs li[data-tab="+hash+"]").click();
+    	} else {
+    		$(".tabs li").eq(0).click();
+    	}
 
     }
 
@@ -230,6 +236,8 @@ $(document).ready(function(){
     $(window).load(function() {
         $(".b-main-slider").fadeTo(300,1);
     });
+
+
 
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
