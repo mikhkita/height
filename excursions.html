@@ -145,12 +145,12 @@
 						<div class="filter-popup slider">
 							<div class="popup-slider">
 								<div class="slider-text clearfix">
-			                            <h3 class="left"><span id="price-l">600</span> р.</h3>
-			                            <h3 class="right"><span id="price-r">2000</span> р.</h3>
-			                            <input type="hidden" name="price-min" id="price-min" value="600">
-			                            <input type="hidden" name="price-max" id="price-max" value="2000">
+			                            <h3 class="left"><span class="min-text"></span> р.</h3>
+			                            <h3 class="right"><span class="max-text"></span> р.</h3>
+			                            <input type="hidden" name="price-min" class="min-val">
+			                            <input type="hidden" name="price-max" class="max-val">
 			                    </div>
-			                    <div class="slider-range" id="price-range"></div>
+			                    <div class="slider-range" data-min="600" data-max="2000" data-min-cur="700" data-max-cur="1500" data-step="100"></div>
 		                    </div>
 		                    <input type="submit" class="b-blue-butt" value="Применить">
 	                    </div>
@@ -217,12 +217,12 @@
 						<div class="filter-popup slider">
 							<div class="popup-slider">
 								<div class="slider-text clearfix">
-			                            <h3 class="left"><span id="time-l">1</span> ч.</h3>
-			                            <h3 class="right"><span id="time-r">5</span> ч.</h3>
-			                            <input type="hidden" name="time-min" id="time-min" value="1">
-			                            <input type="hidden" name="time-max" id="time-max" value="5">
+			                            <h3 class="left"><span class="min-text">1</span> ч.</h3>
+			                            <h3 class="right"><span class="max-text">5</span> ч.</h3>
+			                            <input type="hidden" name="time-min" class="min-val">
+			                            <input type="hidden" name="time-max" class="max-val">
 			                    </div>
-			                    <div class="slider-range" id="time-range"></div>
+			                    <div class="slider-range" data-min="0" data-max="5" data-min-cur="1" data-max-cur="5" data-step="0.5"></div>
 		                    </div>
 		                    <input type="submit" class="b-blue-butt" value="Применить">
 	                    </div>

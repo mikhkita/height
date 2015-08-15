@@ -145,15 +145,6 @@ $(document).ready(function(){
         });   
     });
 
-
-    if($("#price-range").length > 0) {
-    	range_init("price");
-	}
-
-	 if($("#time-range").length > 0) {
-    	range_init("time");
-	}
-
     $(".filter-items li span").bind("mouseup",function(){
         if(!$(this).closest("li").hasClass("active")) {
             $(".filter-items li.active").removeClass("active").find(".filter-popup").slideUp(200);
@@ -200,23 +191,41 @@ $(document).ready(function(){
 
     }
 
-    function range_init(name) {
-    	var min_val = $( "#"+name+"-min" ).val()*1,
-    	max_val = $( "#"+name+"-max" ).val()*1;
-	    $( "#"+name+"-range" ).slider({
-	        range: true,
-	        min: min_val,
-	        max: max_val,
-	        values: [ min_val, max_val ],
-	        slide: function( event, ui ) {
-	            $( "#"+name+"-l" ).text( ui.values[ 0 ] );
-	            $( "#"+name+"-r" ).text( ui.values[ 1 ] );
-	            $( "#"+name+"-min" ).val( ui.values[ 0 ] );
-	            $( "#"+name+"-max" ).val( ui.values[ 1 ] );
 
-	        }
-	    });
+    function range_init() {
+    	$.each($(".slider-range"),function(){
+    		var min_input = $(this).closest(".popup-slider").find(".min-val"),
+    		max_input = $(this).closest(".popup-slider").find(".max-val"),
+    		min_text = $(this).closest(".popup-slider").find(".min-text"),
+    		max_text = $(this).closest(".popup-slider").find(".max-text"),
+    		min_val = $(this).attr("data-min")*1,
+    		max_val = $(this).attr("data-max")*1,
+    		cur_min_val = $(this).attr("data-min-cur")*1,
+    		cur_max_val = $(this).attr("data-max-cur")*1,
+    		data_step = $(this).attr("data-step") ? $(this).attr("data-step")*1 : 1;
+		    $(this).slider({
+		    	step: data_step,
+		        range: true,
+		        min: min_val,
+		        max: max_val,
+		        values: [ cur_min_val, cur_max_val ],
+		        slide: function( event, ui ) {
+		            min_input.val( ui.values[ 0 ] );
+		            max_input.val( ui.values[ 1 ] );
+		            min_text.text( ui.values[ 0 ] );
+		            max_text.text( ui.values[ 1 ] );
+
+		        }
+		    });
+		    min_input.val( cur_min_val );
+            max_input.val( cur_max_val );
+            min_text.text( cur_min_val );
+            max_text.text( cur_max_val );
+    	});
+    	
     }
+    range_init();
+
 
     $(window).load(function() {
         $(".b-main-slider").fadeTo(300,1);
