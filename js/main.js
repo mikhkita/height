@@ -112,9 +112,10 @@ $(document).ready(function(){
           }, 200, function() {
             setHoverTo($(".b-main-menu ul li.active"),0.2);
         });
+        $(".b-header .b-block .b-main-menu").animate({marginLeft: "15px"}, 200 );
         
         $(this).animate({
-            width: "180px"
+            width: "170px"
           }, 200, function() {
             $("#search input").fadeIn(150);
             $("#search input[type='text']").focus();
@@ -122,12 +123,13 @@ $(document).ready(function(){
     });
     $("#search input").blur(function(){
         $("#search input").fadeOut(100);
-        $(".b-main-menu ul li a").animate({
+        $("ul.b-menu>li>a").animate({
             paddingLeft: "15px",
             paddingRight: "15px"
           }, 200, function() {
             setHoverTo($(".b-main-menu ul li.active"),0.2);
         });
+        $(".b-header .b-block .b-main-menu").animate({marginLeft: "30px"}, 200 );
         $("#search").animate({
             width: "36px"
           }, 200, function() {
