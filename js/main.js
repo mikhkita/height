@@ -46,26 +46,34 @@ $(document).ready(function(){
     
     if( $("#b-hov").length ){
         var timeout;
-        $( window ).load(function() {
-            setHoverTo($(".b-main-menu ul li.active"),0);
-        });
-        
-
+        if( $(".b-main-menu ul li.menu-item.active").length) {
+	        $( window ).load(function() {
+	            setHoverTo($(".b-main-menu ul li.active"),0);
+	        });   
+    	}
+    
         $(".b-main-menu ul li.menu-item").hover(function(){
-                $("#b-hov").css("margin-left","0");
-                clearTimeout(timeout);
-                setHoverTo($(this),0.3);
-            },function(){
-                    timeout = setTimeout(function(){
-                        setHoverTo($(".b-main-menu ul li.menu-item.active"),0.4);
-                    },400);
-            });
+	            $("#b-hov").css("margin-left","0");
+	            $("#b-hov:hidden").fadeIn();
+	            clearTimeout(timeout);
+	            setHoverTo($(this),0.3);
+	        },function(){
+                timeout = setTimeout(function(){
+                	if($(".b-main-menu ul li.menu-item.active").length) {
+	                    setHoverTo($(".b-main-menu ul li.menu-item.active"),0.4);
+	                } else {
+	                	$("#b-hov").fadeOut();
+	                }
+	            },400);
+        	});
     }
 
     function setHoverTo(el,dur){
+
         var curWidth = el.width(),
             curOffset = el.position().left;
         TweenLite.to($("#b-hov"), dur, { "left" : curOffset, "width" : curWidth, ease : Quad.easeInOut } );
+        
     }
 
     $('.b-main-slider').slick({
