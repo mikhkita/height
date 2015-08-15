@@ -175,13 +175,14 @@ $(document).ready(function(){
                 $(".excursions").fadeOut(300,function(){
                     $(".excursions li").hide();
                     if(filter=="all") {
-                        $(".excursions li").show();
+                        var items = $(".excursions li");
                     } else {        
-                        if( $(".excursions li").filter("."+filter).length ){
-                            $(".excursions li").filter("."+filter).show();
-                        }else{
-                            $(".b-empty").fadeIn();
-                        }
+                        var items = $(".excursions li").filter("."+filter);
+                    }
+                    if( items.length ){
+                        items.show();
+                    }else{
+                        $(".b-empty").fadeIn();
                     }
                     $(".excursions").fadeIn();
                 });

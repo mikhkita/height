@@ -715,8 +715,9 @@ p {
 		.excursions li:nth-child(3n){
 			margin-right: 0;
 		}
-			.excursions li a{ 
+			.excursions li>a{ 
 				display: block;
+    			padding-bottom: 20px;
 			}
 			.excursions li a div{
 				position: relative;
@@ -759,13 +760,14 @@ p {
 				margin-top: 12px;
 			}
 			.excursions li h5{
+				max-height: 16px;
 				font-family: "museo_sans_cyrl300";
 				position: relative;
 				font-size: 14px;
 				line-height: 1.2;
 				color: #00CEFC;
 				margin-left: 16px;
-				margin-top: 9px;
+				margin-bottom: 9px;
 			}
 				.excursions li h5 span{
 					font-family: "museo_sans_cyrl100";
@@ -783,7 +785,7 @@ p {
 				margin-top: 2px;
 			}
 			.b-excurs-list .b-block .excursions li .price {
-				margin-top: 13px;
+				padding-top: 10px;
 			}
 
 .b-reviews {
@@ -986,7 +988,7 @@ p {
 .b-content {
 
 }
-	.b-content.desc-back{
+	.desc-back{
 		background-color: #f8f8f8;
 	}
 
@@ -1526,6 +1528,13 @@ span.checked {}
 	font-size: 18px;
 	line-height: 1.2;
 	margin-bottom: 10px;
+}
+.b-empty.b-shown{
+	display: block;
+}
+.b-empty.b-filter-empty{
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1250px){
