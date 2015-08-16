@@ -1,5 +1,6 @@
 $(document).ready(function(){	
-    var open = false;
+    var open = false,
+        transition = 0;
 
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
@@ -46,21 +47,21 @@ $(document).ready(function(){
     
     if( $("#b-hov").length ){
         var timeout;
-        if( $(".b-main-menu ul li.menu-item.active").length) {
+        if( $(".b-main-menu ul.b-menu>li.active").length) {
 	        $( window ).load(function() {
-	            setHoverTo($(".b-main-menu ul li.active"),0);
+	            setHoverTo($(".b-main-menu ul.b-menu>li.active"),0);
 	        });   
     	}
     
-        $(".b-main-menu ul li.menu-item").hover(function(){
+        $(".b-main-menu ul.b-menu>li").hover(function(){
 	            $("#b-hov").css("margin-left","0");
 	            $("#b-hov:hidden").fadeIn();
 	            clearTimeout(timeout);
 	            setHoverTo($(this),0.3);
 	        },function(){
                 timeout = setTimeout(function(){
-                	if($(".b-main-menu ul li.menu-item.active").length) {
-	                    setHoverTo($(".b-main-menu ul li.menu-item.active"),0.4);
+                	if($(".b-main-menu ul.b-menu>li.active").length) {
+	                    setHoverTo($(".b-main-menu ul.b-menu>li.active"),0.4);
 	                } else {
 	                	$("#b-hov").fadeOut();
 	                }
@@ -170,8 +171,8 @@ $(document).ready(function(){
                 $('.tabs li.active').removeClass("active");
                 $(this).addClass("active");
                 var filter = ($(this).attr("data-tab"));
-                $(".b-empty").fadeOut(299);
-                $(".excursions").fadeOut(300,function(){
+                $(".b-empty").fadeOut(transition-1);
+                $(".excursions").fadeOut(transition,function(){
                     $(".excursions li").hide();
                     if(filter=="all") {
                         var items = $(".excursions li");
@@ -181,19 +182,30 @@ $(document).ready(function(){
                     if( items.length ){
                         items.show();
                     }else{
-                        $(".b-empty").fadeIn();
+                        $(".b-empty").fadeIn(transition);
                     }
-                    $(".excursions").fadeIn();
+                    $(".excursions").fadeIn(transition);
                 });
-                window.location.hash = "#"+$(this).attr("data-tab");
+                if( $(".inner").length )
+                    window.location.hash = "#"+$(this).attr("data-tab");
             }
         });
-        if(window.location.hash && window.location.hash!= "#") {
-    		var hash = window.location.hash.substr(1);
-    		$(".tabs li[data-tab="+hash+"]").click();
-    	} else {
-    		$(".tabs li").eq(0).click();
-    	}
+        if( $(".inner").length ){
+            if(window.location.hash && window.location.hash!= "#") {
+        		var hash = window.location.hash.substr(1);
+        		$(".tabs li[data-tab="+hash+"]").click();
+
+                if( $(".city-tabs").length ){
+                    $("body, html").animate({
+                        scrollTop : $(".city-tabs").offset().top
+                    },0);
+                }
+        	} else {
+        		$(".tabs li").eq(0).click();
+        	}
+        }else{
+            $(".tabs li").eq(0).click();
+        }
 
     }
 
@@ -236,6 +248,8 @@ $(document).ready(function(){
     $(window).load(function() {
         $(".b-main-slider").fadeTo(300,1);
     });
+
+    transition = 300;
 
 
 

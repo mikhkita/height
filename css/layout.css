@@ -177,6 +177,15 @@ input:-moz-placeholder {
 	text-align: left;
 	padding: 50px 0;
 }
+.b-text-content .b-text{
+	padding: 0px 0px 30px;
+}
+	.b-text>.b-block{
+		background-color: #FFF;
+    	padding: 26px 21px 25px;
+    	box-sizing: border-box;
+    	border-radius: 5px;
+	}
 .b-text p,.b-text ul li,.b-text table tr td,.b-text table tr th{
 	color: #5a5a5a;
 	font-family: "museo_sans_cyrl100";
@@ -340,12 +349,12 @@ p {
 			}
 		.b-header .b-block .b-main-menu ul {
 		}
-			.b-header .b-block .b-main-menu ul li.menu-item {
+			.b-header .b-block .b-main-menu ul.b-menu>li {
 				float: left;
 				margin-right: 5px;
 				position: relative;
 			}
-			.b-header .b-block .b-main-menu ul li.menu-item:hover ul {
+			.b-header .b-block .b-main-menu ul.b-menu>li:hover ul {
 				opacity:1;
 			    visibility:visible;
 			    -moz-transition: -moz-transform .3s, opacity .3s linear, visibility .1s linear .1s;
@@ -359,14 +368,14 @@ p {
 			    		transform: translateY(0px);
 				
 			}
-			.b-header .b-block .b-main-menu ul li.active{
+			.b-header .b-block .b-main-menu ul.b-menu>li.active{
 			}
-				.b-header .b-block .b-main-menu ul li.menu-item a{
+				.b-header .b-block .b-main-menu ul.b-menu>li a{
 					padding: 15px;		
 					display: block;
 				
 }
-			.b-header .b-block .b-main-menu ul li.menu-item ul {
+			.b-header .b-block .b-main-menu ul.b-menu>li ul {
 				padding: 10px 0;
     			background-color: #00CEFC;
     			position: absolute;
@@ -383,7 +392,7 @@ p {
 			    		transform: translateY(-10px);
 
 			}
-				.b-header .b-block .b-main-menu ul li.menu-item ul:before{
+				.b-header .b-block .b-main-menu ul.b-menu>li ul:before{
 					position: absolute;
     				content: "s";
     				font-size: 0px;
@@ -396,16 +405,16 @@ p {
     				background-image: url('../i/triangle.png');
     				background-size: 20px;
 				}
-				.b-header .b-block .b-main-menu ul li.menu-item ul li{
+				.b-header .b-block .b-main-menu ul.b-menu>li ul li{
 			
 				}
-					.b-header .b-block .b-main-menu ul li.menu-item ul li a{
+					.b-header .b-block .b-main-menu ul.b-menu>li ul li a{
 						color: #fff;
 						padding: 10px 20px;
 						font-size: 16px;
 						font-family: 'museo_sans_cyrl100';
 					}
-						.b-header .b-block .b-main-menu ul li.menu-item ul li a:hover {
+						.b-header .b-block .b-main-menu ul.b-menu>li ul li a:hover {
 							text-decoration: underline;
 						}
 		.b-header .b-block .b-date-cont {
@@ -1339,7 +1348,7 @@ span.checked {}
 						text-decoration: none;
 					}
 .desc-content {
-
+	padding-bottom: 20px;
 }
 	.desc-content .b-block {
 		text-align: left;
@@ -1527,7 +1536,7 @@ span.checked {}
 						}
 .b-desc-reviews {
 	background: none;
-	padding: 20px 0 20px;
+	padding: 0px 0 20px;
 }
 	.b-desc-reviews .b-block h2 {
 		font-size: 30px;
