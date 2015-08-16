@@ -119,7 +119,11 @@ $(document).ready(function(){
             paddingLeft: "4px",
             paddingRight: "4px"
           }, 200, function() {
-            setHoverTo($(".b-main-menu ul li.active"),0.2);
+            if($(".b-main-menu ul.b-menu>li.active").length) {
+                setHoverTo($(".b-main-menu ul.b-menu>li.active"),0.4);
+            } else {
+                $("#b-hov").fadeOut();
+            }
         });
         $(".b-header .b-block .b-main-menu").animate({marginLeft: "15px"}, 200 );
         
