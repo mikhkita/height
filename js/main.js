@@ -120,7 +120,7 @@ $(document).ready(function(){
             paddingRight: "4px"
           }, 200, function() {
             if($(".b-main-menu ul.b-menu>li.active").length) {
-                setHoverTo($(".b-main-menu ul.b-menu>li.active"),0.4);
+                setHoverTo($(".b-main-menu ul.b-menu>li.active"),0.2);
             } else {
                 $("#b-hov").fadeOut();
             }
