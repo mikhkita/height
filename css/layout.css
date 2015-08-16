@@ -1510,19 +1510,20 @@ span.checked {}
 					}
 						.desc-content .b-block .desc-right .other a div span{
 							position: absolute;
-							right: -4px;
-							bottom: 19px;    
-							width: 118px;    
-							height: 44px;
-						    box-sizing: border-box;    
-							padding: 10px 0 0 23px;
-						    background-image: url("../i/price-other.png");
-						    background-position: 50% 50%;
-						    background-repeat: no-repeat;
-						    font-family: "museo_sans_cyrl500";
-						    font-size: 14px;
-						    line-height: 2;
-						    color: #fff;
+    						right: -4px;
+    						bottom: 19px;
+    						width: 118px;
+    						height: 44px;
+    						box-sizing: border-box;
+    						text-align: center;
+    						padding: 11px 0 0 11px;
+    						background-image: url("../i/price-other.png");
+    						background-position: 50% 50%;
+    						background-repeat: no-repeat;
+    						font-family: "museo_sans_cyrl500";
+    						font-size: 13px;
+    						line-height: 2;
+    						color: #fff;
 						}
 					.desc-content .b-block .desc-right .other a h3{
 						font-family: "museo_sans_cyrl300";
