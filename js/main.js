@@ -242,7 +242,7 @@ $(document).ready(function(){
     	});
     	
     }
-    range_init();
+    if($(".slider-range").length) range_init();
 
 
     $(window).load(function() {
