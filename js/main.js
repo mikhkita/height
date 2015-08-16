@@ -136,7 +136,11 @@ $(document).ready(function(){
             paddingLeft: "15px",
             paddingRight: "15px"
           }, 200, function() {
-            setHoverTo($(".b-main-menu ul li.active"),0.2);
+            if($(".b-main-menu ul.b-menu>li.active").length) {
+                setHoverTo($(".b-main-menu ul.b-menu>li.active"),0.2);
+            } else {
+                $("#b-hov").fadeOut();
+            }
         });
         $(".b-header .b-block .b-main-menu").animate({marginLeft: "30px"}, 200 );
         $("#search").animate({
