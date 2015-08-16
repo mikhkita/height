@@ -933,15 +933,13 @@ p {
 		padding-top: 42px;
 		padding-bottom: 38px;
 	}
-		.b-footer .b-block .footer-services{
-			width: 270px;
-			margin-right: 121px;
+		.b-footer .b-block>.left{
+			min-width: 210px;
+			margin-right: 20px;
 		}
 		.b-footer .b-block .right{
 			width: 230px;		
-		
-			margin-right: 14px;
-}
+		}
 			.b-footer .b-block  h3{
 				font-family: "museo_sans_cyrl300";
 				font-size: 20px;
