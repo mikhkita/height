@@ -267,7 +267,7 @@
 						<h5 class="icon filter-location">Место расположения:<span>Метро Царицыно</span></h5>
 						<div class="price clearfix">
 							<h4 class="left">1200 руб.</h4>
-							<a class="b-blue-butt right" href="#">Забронировать</a>
+							<a class="b-blue-butt right fancy" href="#" data-block="#b-popup-ticket">Забронировать</a>
 						</div>
 					</li>
 					<li class="id-2">
@@ -399,33 +399,71 @@
 	</div>
 <div style="display:none;">
 	<div id="b-popup-1">
-			<div class="for_all b-popup">
-				<h3>Оставьте заявку и мы свяжемся с вами в течение 30 минут</h3>
-				<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-1">
-					<div class="b-popup-form">
-						<input type="text" name="name" placeholder="Ваше имя" required/>
-						<input type="text" name="phone" placeholder="Ваш телефон" required/>
-						<input type="text" name="email" placeholder="Ваш e-mail"/>
-						<input type="hidden" name="subject" value="Обратный звонок"/>
-						<input type="submit" class="ajax b-blue-butt" value="Заказать">
-					</div>
-				</form>
-			</div>
-		</div>
-		<div id="b-popup-2">
-			<div class="b-thanks b-popup">
-				<h3>Спасибо!</h3>
-				<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами.</h4>
-				<input type="submit" class="b-blue-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
-			</div>
-		</div>
-		<div id="b-popup-error">
-			<div class="b-thanks b-popup">
-				<h3>Ошибка отправки!</h3>
-				<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
-				<input type="submit" class="b-blue-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
-			</div>
+		<div class="for_all b-popup">
+			<h3>Оставьте заявку и мы свяжемся с вами в течение 30 минут</h3>
+			<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-1">
+				<div class="b-popup-form">
+					<input type="text" name="name" placeholder="Ваше имя" required/>
+					<input type="text" name="phone" placeholder="Ваш телефон" required/>
+					<input type="text" name="email" placeholder="Ваш e-mail"/>
+					<input type="hidden" name="subject" value="Обратный звонок"/>
+					<input type="submit" class="ajax b-blue-butt" value="Заказать">
+				</div>
+			</form>
 		</div>
 	</div>
+	<div id="b-popup-ticket">
+		<div class="for_all b-popup ticket">
+			<h2 class="white">Записать на экскурсию:<br><span>Название экскурсии (может быть длинным)</span></h2>
+			<span class="popup-close" onclick="$.fancybox.close(); return false;">×</span>
+			<h2>Для записи на экскурсию заполните, пожалуйста форму. В течении 30 минут с Вами свяжется менеджер для подтверждения заявки!</h2>
+			<form action="kitsend.php" method="POST" id="b-form-2" data-block="#b-popup-ticket">
+				<div class="b-popup-form clearfix">
+					<div class="left first">
+						<label for="ticket-name">Ваше имя *</label>
+						<input type="text" id="ticket-name" name="name" placeholder="Ваше имя" required/>
+						<label for="ticket-lastName">Фамилия</label>
+						<input type="text" id="ticket-lastName" name="1" placeholder="Фамилия"/>
+						<input type="hidden" name="1-name" value="Фамилия"/>
+						<label for="ticket-phone">Телефон *</label>
+						<input type="text" id="ticket-phone" name="phone" placeholder="Телефон" required/>
+						<label for="ticket-email">Email</label>
+						<input type="text" id="ticket-email" name="email" placeholder="Email"/>
+						<label for="ticket-date">Дата экскурсии</label>
+						<input type="date" id="ticket-date" name="2" placeholder="Дата экскурсии"/>
+						<input type="hidden" name="2-name" value="Дата экскурсии"/>						
+					</div>
+					<div class="left">
+						<label for="ticket-people">Количество человек</label>
+						<input type="text" id="ticket-people" name="3" placeholder="Кол-во человек"/>
+						<input type="hidden" name="3-name" value="Кол-во человек"/>
+						<label for="ticket-people">Откуда Вы узнали о нас?</label>
+						<textarea id="ticket-people" name="4" placeholder="Откуда Вы узнали о нас"/></textarea>
+						<input type="hidden" name="4-name" value="Откуда Вы узнали о нас"/>
+						<label for="ticket-people">Комментарий</label>
+						<textarea id="ticket-people" name="5" placeholder="Комментарий"/></textarea>
+						<input type="hidden" name="5-name" value="Комментарий"/>
+						<input type="hidden" name="subject" value="Запись на экскурсию"/>
+						<input type="submit" class="ajax b-blue-butt" value="Записаться на экскурсию">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="b-popup-2">
+		<div class="b-thanks b-popup">
+			<h3>Спасибо!</h3>
+			<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами.</h4>
+			<input type="submit" class="b-blue-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+		</div>
+	</div>
+	<div id="b-popup-error">
+		<div class="b-thanks b-popup">
+			<h3>Ошибка отправки!</h3>
+			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
+			<input type="submit" class="b-blue-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+		</div>
+	</div>
+</div>
 </body>
 </html>

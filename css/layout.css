@@ -151,10 +151,12 @@ input.error,textarea.error{
 	left: 50%;
 	margin-left: -500px;
 }
-input::-webkit-input-placeholder {
+::-webkit-input-placeholder {
+	font-size: 16px;
 	color: #c7c7c7;
 }
-input:-moz-placeholder {
+:-moz-placeholder {
+	font-size: 16px;
 	color: #c7c7c7;
 }
 .b-blue-butt{
@@ -274,6 +276,42 @@ p {
 	margin-bottom: 30px;
 	z-index: 9999;
 }
+
+.b-popup.ticket {
+	width: 709px;
+	padding: 0;
+	text-align: left;
+	border-radius: 0;
+	position: relative;
+	box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.35);
+}
+	.b-popup.ticket .popup-close {
+		cursor: pointer;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		width: 30px;
+		font-size: 18px;
+		line-height: 27px;
+		text-align: center;
+		color: #fff;
+		height: 30px;
+		border-radius: 50%;
+		border: 1px solid #fff;
+	}
+	.b-popup h2 {
+		font-family: "museo_sans_cyrl500";
+		font-size: 16px;
+		line-height: 1.2;
+		color: #464646;
+		padding: 20px 75px 18px 23px;
+	}
+	.b-popup h2.white{
+		color: #fff;
+		background-color: #00CEFC;
+	
+		font-size: 18px;
+}
 	.b-popup h3 {
 		font-family: "museo_sans_cyrl500";
 		font-size: 14px;
@@ -293,7 +331,7 @@ p {
 		line-height: 1.2;
 		color: #5a5a5a;
 	}
-	.b-popup input {
+	.b-popup input, .b-popup textarea {
 		border-radius: 17px;
 	    border: 2px solid #00CEFC;
 	    padding: 8px 14px 7px;
@@ -301,14 +339,59 @@ p {
 	    box-sizing: border-box;
 	    font-family: "museo_sans_cyrl300";
 	    font-size: 16px;
-	    margin-top: 14px;
-	
-}
+	    margin-top: 14px;	
+	}
 	.b-popup input[type=submit] {
 		margin-top: 25px;
 		width: 158px;
 		cursor: pointer;
 	}
+	.b-popup.ticket .b-popup-form {
+		border-top: 4px solid #00CEFC;
+		margin: 0 25px;
+		padding: 30px 0 40px;
+	}
+		.b-popup.ticket .b-popup-form .left{
+			padding: 0 31px;
+			width: 337px;
+			box-sizing: border-box;
+			text-align: center;	
+		}
+		.b-popup.ticket .b-popup-form .left.first{
+			border-right: 2px solid #dddddd;
+			padding-left: 15px;
+			width: 321px;
+		}
+			.b-popup.ticket .b-popup-form .left label{
+				text-align: left;
+				font-family: "museo_sans_cyrl500";
+				font-size: 16px;
+				display: block;
+				padding: 0 19px;
+			}	
+			.b-popup.ticket .b-popup-form .left input,.b-popup.ticket .b-popup-form .left textarea{
+				width: 249px;   
+				text-align: left;
+				border: 1px solid #b0b0b0;
+				margin-bottom: 12px;
+				margin-top: 7px;
+				padding: 5px 21px 5px;
+			}
+			.b-popup.ticket .b-popup-form .left input.error,.b-popup.ticket .b-popup-form .left textarea.error {
+				border: 1px solid #F97171 !important;
+			}
+			.b-popup.ticket .b-popup-form .left textarea{
+				height: 68px;
+				resize: none;
+				border-radius: 10px;
+			}
+			.b-popup.ticket .b-popup-form .left .b-blue-butt {
+				text-align: center;
+			
+				margin-top: 26px;
+				border-color: #00CEFC;
+				padding: 7px 0px 8px;
+}
 .title {
 	font-family: "museo_cyrl500";
 	font-size: 34px;
