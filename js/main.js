@@ -125,10 +125,10 @@ $(document).ready(function(){
                 $("#b-hov").fadeOut();
             }
         });
-        $(".b-header .b-block .b-main-menu").animate({marginLeft: "15px"}, 200 );
+        $(".b-header .b-block .b-main-menu").animate({marginLeft: "10px"}, 200 );
         
         $(this).animate({
-            width: "170px"
+            width: "160px"
           }, 200, function() {
             $("#search input").fadeIn(150);
             $("#search input[type='text']").focus();
