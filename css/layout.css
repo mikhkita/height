@@ -320,7 +320,7 @@ p {
 		margin-bottom: 11px;
 	}
 	.b-thanks {
-		width: 300px;
+		width: 350px;
 	}
 	.b-thanks h3 {
 		font-size: 18px;
@@ -330,6 +330,9 @@ p {
 		font-size: 16px;
 		line-height: 1.2;
 		color: #5a5a5a;
+	}
+	.b-thanks h4{
+		line-height: 1.5;
 	}
 	.b-popup input, .b-popup textarea {
 		border-radius: 17px;
@@ -622,6 +625,9 @@ p {
 	color: #fff;
 	opacity: 0;
 }
+	.b-main-slider a{
+		color: #FFF;
+	}
 	.b-main-slider  .slick-dots{
 		position: absolute;
 		right: 50%;
@@ -670,6 +676,7 @@ p {
 			margin-top: 269px;
 		}
 			.b-main-slider .b-block .city h3{
+				color: #FFF;
 				font-size: 30px;
 				text-align: left;
 			}
