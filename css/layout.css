@@ -1,31 +1,6 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'museo_sans_cyrl100';
-    src: url('../fonts/OpenSans-Regular.eot');
-    src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-         url('../fonts/OpenSans-Regular.woff') format('woff'),
-         url('../fonts/OpenSans-Regular.ttf') format('truetype'),
-         url('../fonts/OpenSans-Regular.svg#museo_sans_cyrl100') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'museo_sans_cyrl300';
-    src: url('../fonts/OpenSans-Regular.eot');
-    src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-         url('../fonts/OpenSans-Regular.woff') format('woff'),
-         url('../fonts/OpenSans-Regular.ttf') format('truetype'),
-         url('../fonts/OpenSans-Regular.svg#museo_sans_cyrl300') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
     font-family: 'museo_sans_cyrl500';
     src: url('../fonts/OpenSans-Regular.eot');
     src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
@@ -82,7 +57,7 @@ body {
 body {
 	min-width: 1000px;
 	text-align: center;
-	font-family: 'museo_sans_cyrl300';
+	font-family: 'museo_sans_cyrl500';
 	overflow-x: hidden;
 	overflow-y: scroll;
 	color: #000;
@@ -160,7 +135,7 @@ input.error,textarea.error{
 	color: #c7c7c7;
 }
 .b-blue-butt{
-	font-family: "museo_sans_cyrl300";
+	font-family: "museo_sans_cyrl500";
 	font-size: 14px;
 	line-height: 1.2;
 	color: #fff;
@@ -189,8 +164,8 @@ input.error,textarea.error{
     	border-radius: 5px;
 	}
 .b-text p,.b-text ul li,.b-text table tr td,.b-text table tr th{
-	color: #5a5a5a;
-	font-family: "museo_sans_cyrl100";
+	color: #383838;
+	font-family: "museo_sans_cyrl500";
     font-size: 14px;
     line-height: 1.75;  
     margin-bottom: 15px;
@@ -200,7 +175,7 @@ input.error,textarea.error{
 }
 .b-text h4{
 	color: #000;
-	font-family: "museo_sans_cyrl300";
+	font-family: "museo_sans_cyrl500";
 	font-size: 18px;
 	line-height: 1.2;
 	margin-bottom: 10px;
@@ -326,7 +301,7 @@ p {
 		font-size: 18px;
 	}
 	.b-popup h4 {
-		font-family: "museo_sans_cyrl300";
+		font-family: "museo_sans_cyrl500";
 		font-size: 16px;
 		line-height: 1.2;
 		color: #5a5a5a;
@@ -340,7 +315,7 @@ p {
 	    padding: 8px 14px 7px;
 	    width: 225px;
 	    box-sizing: border-box;
-	    font-family: "museo_sans_cyrl300";
+	    font-family: "museo_sans_cyrl500";
 	    font-size: 16px;
 	    margin-top: 14px;	
 	}
@@ -501,7 +476,7 @@ p {
 						color: #fff;
 						padding: 10px 20px;
 						font-size: 16px;
-						font-family: 'museo_sans_cyrl100';
+						font-family: 'museo_sans_cyrl500';
 					}
 						.b-header .b-block .b-main-menu ul.b-menu>li ul li a:hover {
 							text-decoration: underline;
@@ -566,7 +541,7 @@ p {
 					}
 					.b-header .b-block .b-search-cont > div .search input[type="text"] {
 						border: none;
-						font-family: "museo_sans_cyrl300";
+						font-family: "museo_sans_cyrl500";
 						font-size: 14px;
 						display: none;
 						width: 110px;
@@ -702,7 +677,7 @@ p {
 				vertical-align: middle;
 			}
 			.b-advantages .b-block ul li h3{
-				font-family: "museo_sans_cyrl300";
+				font-family: "museo_sans_cyrl500";
 				font-size: 20px;
 				line-height: 1.3;
 				display: table-cell;
@@ -736,7 +711,7 @@ p {
 			background-color: #00CEFC;
 		}
 		.b-about .b-block p{
-			font-family: "museo_sans_cyrl300";
+			font-family: "museo_sans_cyrl500";
 			font-size: 18px;
 			line-height: 1.556;
 			margin-top: 24px;
@@ -784,7 +759,7 @@ p {
 					background-position: 50% 100%;
 				}
 					.b-city .b-block ul li .city-cont h3{
-						font-family: "museo_sans_cyrl300";
+						font-family: "museo_sans_cyrl500";
 						font-size: 20px;
 						line-height: 1.3;
 						margin-bottom: 17px;
@@ -799,7 +774,7 @@ p {
 						background-color: #00CEFC;
 					}
 					.b-city .b-block ul li .city-cont .city-desc p{
-						font-family: "museo_sans_cyrl100";
+						font-family: "museo_sans_cyrl500";
 						font-size: 14px;
 						padding: 13px 0 0;
 						line-height: 1.857;
@@ -829,7 +804,7 @@ p {
 		.tabs li{
 			float: left;
 			margin-right: 26px;
-			font-family: "museo_sans_cyrl300";
+			font-family: "museo_sans_cyrl500";
 			font-size: 18px;
 			line-height: 1.2;
 			color: #323232;
@@ -845,13 +820,13 @@ p {
 			}
 			.tabs li.active,.tabs li.active:hover {
 				cursor: default;
-				color: #fff;
-				background-color: #00CEFC;
+				color: #fff !important;
+				background-color: #00CEFC !important;
 			}
 		.b-top-excurs .tabs li{
 			float: left;
 			margin-right: 26px;
-			font-family: "museo_sans_cyrl300";
+			font-family: "museo_sans_cyrl500";
 			font-size: 18px;
 			line-height: 1.2;
 			color: #fff;
@@ -925,7 +900,7 @@ p {
 					text-decoration: underline;
 				}
 			.excursions li p {
-				font-family: "museo_sans_cyrl100";
+				font-family: "museo_sans_cyrl500";
 				font-size: 14px;
 				line-height: 1.286;
 				color: #7e7e7e;
@@ -933,16 +908,17 @@ p {
 			}
 			.excursions li h5{
 				max-height: 16px;
-				font-family: "museo_sans_cyrl300";
+				font-family: "museo_sans_cyrl500";
 				position: relative;
 				font-size: 14px;
 				line-height: 20px;
 				color: #00CEFC;
 				margin-left: 16px;
 				margin-bottom: 9px;
+				letter-spacing: -0.1px;
 			}
 				.excursions li h5 span{
-					font-family: "museo_sans_cyrl100";
+					font-family: "museo_sans_cyrl500";
 					color: #7e7e7e;
 					margin-left: 6px;
 				}
@@ -1057,7 +1033,7 @@ p {
 				color: #262626;
 			}
 			.b-question .b-block .left h4{
-				font-family: "museo_sans_cyrl300";
+				font-family: "museo_sans_cyrl500";
 				font-size: 16px;
 				line-height: 1.375;
 				margin-top: 7px;
@@ -1074,7 +1050,7 @@ p {
 				margin-right: 9px;
 				width: 163px;
 				box-sizing: border-box;
-				font-family: "museo_sans_cyrl300";
+				font-family: "museo_sans_cyrl500";
 				font-size: 16px;
 			}
 			.b-question .b-block .right input[type=submit]{
@@ -1103,7 +1079,7 @@ p {
 			width: 230px;		
 		}
 			.b-footer .b-block  h3{
-				font-family: "museo_sans_cyrl300";
+				font-family: "museo_sans_cyrl500";
 				font-size: 20px;
 				line-height: 1.2;
 				color: #fff;
@@ -1126,7 +1102,7 @@ p {
 	
 				}
 					.b-footer .b-block a,.b-footer .b-block p{
-						font-family: "museo_sans_cyrl100";
+						font-family: "museo_sans_cyrl500";
 						font-size: 15px;
 						line-height: 2.063;
 						color: #fff;
@@ -1186,7 +1162,7 @@ p {
 					color: #fff;
 					display: block;
 					padding: 16px 0 9px;
-					font-family: "museo_sans_cyrl300";
+					font-family: "museo_sans_cyrl500";
 					font-size: 18px;
 					line-height: 1.2;    
 					border-radius: 9px 9px 0 0; 
@@ -1221,7 +1197,7 @@ p {
 		    margin-left: 14px;
 		}
 			.b-filter .b-block .filter-items li.icon{
-				font-family: "museo_sans_cyrl300";
+				font-family: "museo_sans_cyrl500";
 				font-size: 18px;
 				line-height: 1.2;
 				color: #00CEFC;
@@ -1271,7 +1247,7 @@ p {
 				    width: 196px;
 				}
 				.b-filter .b-block .filter-items li .filter-popup h3 {
-					font-family: "museo_sans_cyrl300";
+					font-family: "museo_sans_cyrl500";
 					font-size: 12px;
 				}
 				
@@ -1445,10 +1421,10 @@ span.checked {}
 			color: #fff;
 		}
 		.b-question-blue .b-block .left h3 {
-			font-family: "museo_sans_cyrl300";
+			font-family: "museo_sans_cyrl500";
 		}
 		.b-question-blue .b-block .left h4 {
-			font-family: "museo_sans_cyrl100";
+			font-family: "museo_sans_cyrl500";
 		}
 		.b-question-blue .b-block .right input {
 			border: 2px solid #fff;
@@ -1494,7 +1470,7 @@ span.checked {}
 					background: none;
 				}
 				.sub-menu .b-block ul li a{
-					font-family: "museo_sans_cyrl300";
+					font-family: "museo_sans_cyrl500";
 					font-size: 14px;
 					line-height: 1.2;
 					color: #00CEFC;
@@ -1535,7 +1511,7 @@ span.checked {}
 				color: #2d2d2d;
 			}
 			.desc-content .b-block p{
-				font-family: "museo_sans_cyrl100";
+				font-family: "museo_sans_cyrl500";
 				font-size: 14px;
 				color: #383838;
 				line-height: 1.75;
@@ -1599,19 +1575,19 @@ span.checked {}
 			}
 			.desc-content .b-block .desc-right h2 {
 				font-size: 18px;
+				font-weight: 600;
 			}
 			.desc-content .b-block .desc-right .short-desc p {
-				line-height: 1.5;
-			
+				line-height: 1.5;	
 				margin-top: 7px;
-}
+			}
 			.desc-content .b-block .desc-right .short-desc h3 {
 				font-family: "museo_sans_cyrl500";
 				font-size: 14px;
 				line-height: 1.286;
 			}
 			.desc-content .b-block .desc-right .short-desc .tel {
-				font-family: "museo_sans_cyrl100";
+				font-family: "museo_sans_cyrl500";
 				font-size: 14px;
 				margin-top: 1px;
 				display: block;
@@ -1628,7 +1604,7 @@ span.checked {}
 					margin-top: 14px;
 				}
 					.desc-content .b-block .desc-right .short-desc .option h4 {
-						font-family: "museo_sans_cyrl300";
+						font-family: "museo_sans_cyrl500";
 						font-size: 14px;
 						line-height: 1.2;
 						color:  #00CEFC;
@@ -1643,7 +1619,7 @@ span.checked {}
 						    left: -13px;
 						}
 					.desc-content .b-block .desc-right .short-desc .option h5 {
-						font-family: "museo_sans_cyrl100";
+						font-family: "museo_sans_cyrl500";
 						font-size: 14px;
 						line-height: 1.5;
 						color: #7e7e7e;
@@ -1651,7 +1627,7 @@ span.checked {}
 
 					}
 					.desc-content .b-block .desc-right .option h5.price {
-						font-family: "museo_sans_cyrl300";
+						font-family: "museo_sans_cyrl500";
 						font-size: 24px;
 						color: #4e4e4e;
 					}
@@ -1699,7 +1675,7 @@ span.checked {}
     						color: #fff;
 						}
 					.desc-content .b-block .other a h3{
-						font-family: "museo_sans_cyrl300";
+						font-family: "museo_sans_cyrl500";
 						font-size: 14px;
 						line-height: 1.2;
 						color: #000;
@@ -1729,7 +1705,7 @@ span.checked {}
 	display: none;
 	margin-top: 50px;
 	color: #000;
-	font-family: "museo_sans_cyrl300";
+	font-family: "museo_sans_cyrl500";
 	font-size: 18px;
 	line-height: 1.2;
 	margin-bottom: 10px;
@@ -1756,7 +1732,7 @@ span.checked {}
 	}
 	.b-not-found h2{
 		font-size: 40px;
-    	font-family: "museo_sans_cyrl300";
+    	font-family: "museo_sans_cyrl500";
 	}
 	.b-not-found h3{
 		margin-top: 20px;
@@ -1770,7 +1746,7 @@ span.checked {}
 				text-decoration: none;
 			}
 .remove-filter{
-	font-family: "museo_sans_cyrl300";
+	font-family: "museo_sans_cyrl500";
 	float: left;
 	margin-left: 0px;
 	border: none;
